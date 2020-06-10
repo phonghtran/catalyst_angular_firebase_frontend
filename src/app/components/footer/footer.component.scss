@@ -1,0 +1,48 @@
+@import "../../../sass/styles";
+
+:host {
+  h1 {
+    line-height: 2.25rem;
+  }
+
+  wpdh-icon {
+    margin: spacer(1) spacer(2) spacer(2) 0;
+  }
+
+  .wpdh-footer {
+    &__card {
+      padding: spacer(3) 0;
+    }
+    &__contact {
+      border-bottom: $hairline solid $colorAccentDarkTeal;
+      border-left: 0;
+      border-right: 0;
+      border-top: $hairline solid $colorAccentDarkTeal;
+    }
+
+    &__channelContainer {
+      margin-top: spacer(7);
+    }
+  }
+}
+
+@media (min-width: $screen-md) {
+  :host {
+    .wpdh-footer {
+      &__card {
+        padding: 0 spacer(6);
+        width: 33%;
+      }
+      &__contact {
+        border-bottom: 0;
+        border-left: $hairline solid $colorAccentDarkTeal;
+        border-right: $hairline solid $colorAccentDarkTeal;
+        border-top: 0;
+      }
+
+      &__channel {
+        width: 50%;
+      }
+    }
+  }
+}

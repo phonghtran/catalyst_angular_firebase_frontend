@@ -1,0 +1,17 @@
+@import "../../../sass/styles";
+
+:host {
+  &.-fullWidth {
+    input {
+      width: 100%;
+    }
+  }
+
+  input {
+    background-color: transparent;
+    border: $hairline solid $colorSupportingWhite;
+    border-radius: $borderWidth;
+    margin: spacer(3) 0 spacer(5);
+    padding: spacer(3);
+  }
+}

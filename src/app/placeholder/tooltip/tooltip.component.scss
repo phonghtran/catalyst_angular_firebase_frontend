@@ -1,0 +1,29 @@
+@import "../../../sass/styles";
+
+:host {
+  .wpdh-tooltip {
+    &__container {
+      box-sizing: border-box;
+      left: 0;
+      max-width: 30rem;
+      padding: spacer(4) spacer(3);
+      position: fixed;
+      top: 0;
+      z-index: $zindex-tooltip;
+    }
+
+    &__svg {
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: -1;
+
+      path {
+        fill: $colorPrimaryBlack;
+      }
+    }
+  }
+  @include colorClasses("svg > * ", "fill");
+}

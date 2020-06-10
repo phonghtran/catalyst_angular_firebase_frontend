@@ -1,0 +1,11 @@
+<div class="container-fluid">
+  <ng-container *ngFor="let item of items">
+    <wpdh-accordion-card>
+      <ng-container title>{{ item.title }}</ng-container>
+      <ng-container dateStamp>{{ item.dateStamp }}</ng-container>
+      <ng-container hiddenContent>
+        <p>{{ item.hiddenContent }}</p>
+      </ng-container>
+    </wpdh-accordion-card>
+  </ng-container>
+</div>

@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col-sm-12">
+    <div class="d-md-flex justify-content-between">
+      <div>
+        <wpdh-icon
+          (click)="changeExpandState()"
+          [icon]="_iconPath"
+          class="-colorSupportingBlack -round -backgroundAccentCoolGray -floatLeft"
+        ></wpdh-icon>
+
+        <h5 class="wpdh-accordion__title">
+          <ng-content select="[title]"></ng-content>
+        </h5>
+      </div>
+      <div>
+        <h5 class="wpdh-accordion__date">
+          <ng-content select="[dateStamp]"></ng-content>
+        </h5>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row wpdh-accordion__hiddenRow" [@_closed]="_closed">
+  <div class="col-sm-12">
+    <div class="wpdh-accordion__hiddenContent">
+      <ng-content select="[hiddenContent]"></ng-content>
+    </div>
+  </div>
+</div>

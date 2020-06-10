@@ -1,0 +1,11 @@
+@import "../../../sass/styles";
+
+:host {
+  a {
+    cursor: pointer;
+
+    wpdh-icon {
+      margin-left: spacer(2);
+    }
+  }
+}

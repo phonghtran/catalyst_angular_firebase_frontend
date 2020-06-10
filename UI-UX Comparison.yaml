@@ -1,0 +1,325 @@
+Existing Site: 
+	http://wp-devhub-dev-catalyst.s3-website.us-east-2.amazonaws.com/
+
+Components Identified from UI/UX:
+	Simple:
+		Button:
+			FA: wp-button, link
+			Comments:
+				- Buttons are processed through a "link" componenet that determines whether or not the button leads to an external or internal URL
+				- External or internal routing causes a component(s) using "link" to route with either [routerLink] or [href]
+				- "link" is highly reusable and used within the following components:
+					- call-to-action (CTA), content-viewer, landing-item, link-list, wp-button
+			Conclusion:
+				- Don't need help with this component
+				- Styling only
+		Tab-Navigation:
+			FA: tab-block, tab-block-item
+			Comments:
+				- "tab-block" relies on its child(ren) "tab-block-item" to fill in the tab navigation.
+				- No working samples found within our content.
+			Conclusion:
+				- Don't need help at first glance
+				- Styling only
+		&Checkbox:
+			FA: form-question
+			Comments:
+				- Would this be an independent component?
+				- A "checkbox" field is defined and integrated into the form component already
+				- The existing "form-question" component defines this type of input
+			Style-Guide:
+				- .wpdh-form-element
+				- input[type='checkbox']
+			Conclusion:
+				- If it is independent, DesignIt may fully work on this component*
+				- Only styling if not indepedent
+		&Radio-Button:
+			FA: listing-filter, form-question
+			Comments:
+				- The "listing-filter" component has a built-in radio button that is determined by content metadata. So it is not an indpendent piece
+				- The "listing-filter" component will likely be reworked internally and/or removed later down the road.
+				- Would this be an independent component?
+				- A "radio" field is defined and integrated into the form component already
+				- The existing "form-question" component defines this type of input
+			Style-Guide:
+				- .wpdh-form-element
+				- input[type='radio']
+			Conclusion:
+				- If it is independent, DesignIt may fully work on this component*
+				- Only styling if not indepedent
+		!Tool-Tips:
+			FA: None
+			Comments:
+				- No "tool-tip" component exists.
+			Conclusion:
+				DesignIt may work on this freely.
+		&Forms:
+			FA: wp-form, wp-form-group, wp-form-question (cascade in that order)
+			Comments:
+				- Several "form" components exist already
+				- These form elements include field types with basic error checking
+					- text, date, email, number, tel, textarea, dropdown/select
+			Style-Guide:
+				- .wpdh-form-element
+			Conclusion:
+				- If individual form components are made independent, DesignIt may do the full work
+				- If not, Style only
+		!Tags:
+			FA: None
+			Comments:
+				- Should be defined as RESTful Tags
+			Conclusion:
+				- DesignIt may do the full work
+		!Pills:
+			FA: None
+			Comments:
+				- Concept or component does not exist.
+			Conclusion:
+				- DesignIt may do the full work
+		Notifications:
+			FA: note
+			Comments:
+				- "note" component exists and follows same ideaology as bootstrap's version.
+				- Not closable
+			Style-Guide:
+				- .wpdh-note
+			Conclusion:
+				- Style only
+		Search Bar:
+			FA: search-window, search-box
+			Comments:
+				- Search bar functionality already exists, but is in modal format. Meaning there is a search bar avaiable on the page, but once clicked a search "modal" pops up.
+			Style-Guide:
+				- .wpdh-search
+			Conclusion:
+				- Component already exists, style only
+		Search Results:
+			FA: search-window, search-view, search-pager
+			Style-Guide:
+				- .wpdh-search
+			Comments:
+				- Functionality already exists. Results are displayed in the "search-view" component. Pagnation is applied with "search-pager"
+			Conclusion:
+				- Component already exists, style only
+		Global Navigation:
+			FA: main-nav
+			Comments:
+				- Component already exists and is implemented
+			Style-Guide:
+				- .wpdh-nav
+				- .wpdh-header
+				- .wpdh-functional-nav
+				- .wpdh-main-nav
+				- .wpdh-mobile-nav
+				- .wpdh-search-nav
+				- .wpdh-main-nav__wrapper
+					- .wpdh-main-nav wpdh-nav__container
+						- .wpdh-nav__navigation-wrapper
+							- .wpdh-nav__navigation
+			Conclusion:
+				Component exists, style only
+		Left Navigation:
+			FA: sidebar-menu
+			Comments:
+				- Existing component is overly complicated and doesn't fulfill our future use case. Needs to be "dumbed down"
+				- The way we place content in the side navigation is unique and based on a CMS
+			Conclusion:
+				- DesignIt may product this component and we will adapt it to our usage
+		Actionable Content (tiles w/ title, description, and image):
+			FA: card, image-card, quick-link, quick-link-item
+			Comments:
+				- Component already exists in several form. Catalyst will have to consolodate redundancy here.
+				- Existing components include has image as optional. If that is not a new design feature, Catalyst will remove
+			Conclusion:
+				- Style only
+		Masthead (Jumbotron):
+			FA: promo
+			Comments:
+				- Component already exists.
+				- There is a downward's facing arrow at the bottom of DesignIt version. If that scrolls down, that has not be implemented with the existing piece.
+			Style-Guide:
+				- .wpdh-full-width
+					- .wpdh-promo
+						- .wpdh-promo__overlay
+						- .wpdh-promo__container
+			Conclusion:
+				- Styling only
+		Masthead CTA Cluster:
+			FA: feature
+			Comments:
+				- The existing component has more complexity (tags at the bottom)
+			Style-Guide:
+				- .wpdh-feature
+					- .wpdh-feature__overlay
+					- .wpdh-feature__container
+			Conclusion:
+				- Existing component is similar enough not to warrent a rewrite.
+				- Style only
+		Link Clusters:
+			FA: link-list, link-list-item (cascade in that order)
+			Comments:
+				- Existing component is a bit more advanced. Links are incoporated with descriptions, so part of a description may be a link.
+				- Columns are defined in existing component as well.
+			Style-Guide:
+				- .wpdh-link-list wpdh-link-list--columns-{{columns}}
+				- .wpdh-link-list__item
+			Conclusion:
+				- Existing version is more advanced, but may not fill use case.
+				- Style only
+		&Page-Feedback:
+			FA: feedback-form
+      Comments:
+        - Existing component is more complicated. Includes form (from form component)
+        - Simple page feedback does not exist
+      Style-Guide:
+          - .wpdh-feedback-form__form-wrapper
+          - .wpdh-feedback-form__close-button
+      Conclusion:
+        - DesignIt is free to work on simple version, but the styles need to be adapted to the feedback form if a more fleshed out feedback version is part of final design
+		&Two-Column-Paragraph:
+			FA: None
+			Comments:
+				- Our content uses markdown, so this may not be required
+				- Could group with Grid component
+			Conclusion:
+				- If we are using a grid, this component may not need to be implemented.
+	Complex:
+		!Modal-w/-fields:
+			FA: modal, modal-box
+      Comments:
+        - There is a component that exists, but it is not as complex
+        - The fields are relient on the form component
+      Style-Guide:
+        - .wpdh-modal
+        - .wpdh-modal-box
+      Conclusion:
+        - DesignIt may work on this component fully, but form work needs to be coordinated
+		!Sortable-Table:
+			FA: None
+      Comments:
+        - This does not exist in our current setup
+      Conclusion:
+        - DesignIt may fully work on this component
+		Code-Snippet:
+			FA: code-block, code-block-item
+      Comments:
+        - Component exists and is similar to proposed feature
+        - Has dark and light mode
+        - Has tabs where languages may be defined
+        - Uses prettyprint with user defined theme
+        - We use ace-editor for the 3-pane-viewer sandbox. Maybe incoporate that here
+      Style-Guide:
+        - .wpdh-code-block
+      Conclusion: 
+        Style only?
+		API-Card:
+			FA: card
+      Comments:
+        - Leverages "pills" component
+        - We have an existing component for this
+        - What does the upwards facing arrow do on this card? Bring the page up or collapse the card?
+      Conclusion:
+        - We need "pills" component, but otherwise the style only
+		Capability-Card:
+			FA: card, image-card
+      Comments:
+        - Component already exists but there are some slight styling features
+      Conclusion:
+        - Style only?
+		Article-Card:
+			FA: card, image-card
+      Comments:
+        - Similar to image-card component, but styling is different
+      Conclusion:
+        - Style only?
+		!Page-Content-Filter:
+			FA: None concrete. listing-filters, listing-filter
+			Comments:
+				- Uses "pill" component
+        - Existing component is not up to pa
+      Conclusion:
+        - DesignIt may take full charge
+		!Integration-Card:
+			FA: None
+      Comments:
+        - No component exists
+      Conclusion: 
+        - DesignIt may take full charge
+		!Team-Permissions-Card:
+			FA: None
+      Comments:
+        - No component exists
+      Conclusion: 
+        - DesignIt may take full charge
+		!Accordian-Content:
+			FA: dropdown (not as built out)
+      Comments:
+        - No component exists that produces the same effect.
+      Conclusion: 
+        - DesignIt may take full charge
+		!Integration-Process-Overview:
+			FA: Roadmap
+      Comments:
+        - Existing component is similar. Has numbers, descriptions, stylized header text
+        - What does the expand feature do? Is it an extra description?
+      Conclusion:
+        - DesignIt may take full charge
+		!Integration-Status-with-Step-definitions
+			FA: timeline, timeline-item
+      Comments:
+        - Same as "integration-process" component but with checkmarks instead?
+        - Existing component has steps outlined on right side. No expandable content. Numbers instead of checkmarks
+      Conclusion:
+        - It may be better for DesignIt to take this piece
+        - Can coordinate with existing example
+		!Footer:
+			FA: footer
+      Comments:
+        - "footer" component will be a combination of other components
+        - Existing footer not as detailed
+      Conclusion:
+        - DesignIt may take this
+
+FA Page Templates:
+	article:
+		- Basic page articles
+	base:
+		- Base component that other components inherit from
+	basic:
+		- Standard page with not a lot of custom configuration. Takes markdown and displays
+	landing:
+		- Landing page for a sections home. Ex = /partners
+		- Contains sidebar
+	listing:
+	redoc:
+		- Template for 3 pane API viewer
+	service-discovery:
+		- "Solution finder"
+	sidebar:
+		- Can contain filterables, menus, etc.
+	technical:
+		- Part of nebula's three pane viewer. Can be removed.
+
+Possible missing components:
+	Grid
+	Alerts/Callouts
+	Video
+	Pagation
+
+Dependencies:
+	"node.normalize.scss": "^3.0.3",
+	"bootstrap-sass": "^3.3.7",
+  "d3": "^5.5.0",
+
+Bootstrap imports:
+	@import '~bootstrap-sass/assets/stylesheets/bootstrap/mixins/grid-framework';
+	@import '~bootstrap-sass/assets/stylesheets/bootstrap/mixins/grid';
+	@import '~bootstrap-sass/assets/stylesheets/bootstrap/grid';
+	@import '~bootstrap-sass/assets/stylesheets/bootstrap/mixins/clearfix';
+	@import '~bootstrap-sass/assets/stylesheets/bootstrap/variables';
+
+Styling:
+	Each component has own scss file
+		_example-component.scss
+	Classes/IDs use prefix "wpdh-{component}__{sub-feature}"
+	Heavy use of @imports

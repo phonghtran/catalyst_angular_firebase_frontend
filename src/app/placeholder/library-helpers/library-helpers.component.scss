@@ -1,0 +1,61 @@
+@import "../../../sass/styles";
+
+:host {
+  .row {
+    border-left: spacer(3) solid $colorAccentDarkTeal;
+    margin-bottom: spacer(5);
+  }
+
+  table {
+    border-radius: spacer(3);
+
+    &.-number {
+      tbody {
+        tr {
+          td {
+            text-align: center;
+          }
+        }
+      }
+    }
+    thead {
+      tr {
+        th:first-child {
+          border-top-left-radius: spacer(3);
+        }
+
+        th:last-child {
+          border-top-right-radius: spacer(3);
+        }
+
+        th {
+          background-color: $colorShadePrimaryBlackS50;
+          padding: spacer(3) spacer(6);
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        td {
+          background-color: $colorShadePrimaryBlackS40;
+          border-bottom: $hairline solid $colorTintPrimaryBlackT60;
+          padding: spacer(3) spacer(6);
+        }
+      }
+
+      tr:last-child {
+        td:first-child {
+          border-bottom-left-radius: spacer(3);
+        }
+        td:last-child {
+          border-bottom-right-radius: spacer(3);
+        }
+
+        td {
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+}

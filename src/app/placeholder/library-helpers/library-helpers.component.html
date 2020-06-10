@@ -1,0 +1,255 @@
+<h1 id="reference" class="-fontDisplay -fontDisplayLarge">
+  Reference
+</h1>
+
+<ul>
+  <li>
+    <a [routerLink]="['/reference/']" fragment="scss">SCSS</a>
+    <ul>
+      <li>
+        <a [routerLink]="['/reference/']" fragment="spacing">_spacing.scss</a>
+      </li>
+      <li>
+        <a [routerLink]="['/reference/']" fragment="missing">_spacing.scss</a>
+      </li>
+
+      <li>
+        <a [routerLink]="['/reference/']" fragment="colors">_colors.scss</a>
+      </li>
+
+      <li>
+        <a [routerLink]="['/reference/']" fragment="wpreset">_wpReset.scss</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a [routerLink]="['/reference/']" fragment="animation">Angular Animation</a>
+  </li>
+  <li>
+    <a [routerLink]="['/reference/']" fragment="ngcontent"
+      >ng-content Selectors</a
+    >
+  </li>
+
+  <li>
+    <a [routerLink]="['/reference/']" fragment="icons">Icon Library</a>
+  </li>
+</ul>
+
+<div class="container-fluid">
+  <div id="scss" class="row">
+    <div class="col-sm-12">
+      <h2>SCSS</h2>
+
+      <h3 id="spacing">_spacing.scss</h3>
+
+      <h4>Helper Function: "spacer(n)"</h4>
+
+      <p>
+        Modeling after Bootstrap's spacing classes, but to be used in the SCSS
+        declarations. You can use "spacer(n)" for any spacing such as margins
+        and padding.
+      </p>
+      <pre [innerText]="_codeStrings[0]"></pre>
+
+      <table class="-number">
+        <thead>
+          <tr>
+            <th>Spacer Offset</th>
+            <th>Pixels</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>18</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>24</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>36</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>48</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>78</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>108</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h4>Helper Variables</h4>
+
+      <pre [innerText]="_codeStrings[1]"></pre>
+      <pre [innerText]="_codeStrings[2]"></pre>
+      <h3 id="missing">Missing helper classes from "bootstrap-sass"</h3>
+
+      <h4>Margin</h4>
+
+      <p>Helpful for resetting header tags on the fly for complex layouts.</p>
+
+      <pre [innerText]="_codeStrings[3]"></pre>
+      <pre [innerText]="_codeStrings[4]"></pre>
+
+      <h4 class="mb-0">Need</h4>
+      <h3 class="mt-0 -fontDisplay -fontColorBlue">SUPPORT</h3>
+      <pre [innerText]="_codeStrings[5]"></pre>
+
+      <h4>Flex</h4>
+      <p>
+        The entire "flex" module of Bootstrap is missing from "bootstrap-sass"
+        So "_flexGenerator.scss" re-creates that. Useful for complex layouts
+        with headers for example.
+      </p>
+
+      <p>
+        For full reference see Bootstrap's page on
+        <a
+          href="https://getbootstrap.com/docs/4.5/utilities/flex/"
+          target="_blank"
+          >their classes</a
+        >.
+      </p>
+
+      <p>
+        This example below quickly puts two items on opposite sides of each
+        other only on tablet or bigger. Otherwise they stack responsively on
+        phone.
+      </p>
+
+      <pre [innerText]="_codeStrings[6]"></pre>
+
+      <h3 id="colors">_colors.scss</h3>
+
+      <h4>Mixin: colorClasses</h4>
+
+      <p>
+        If any component needs color specific class modifiers. Instead of
+        manually writing them or putting it outside of the SCSS with Angular
+        data passing: you can use this mixin to quickly generate specific color
+        wrapping with CSS classes.
+      </p>
+
+      <p>
+        There is some maintenance with modifying the array of $colors inside the
+        mixin if the color palette changes.
+      </p>
+
+      <pre [innerText]="_codeStrings[7]"></pre>
+
+      <p>
+        Generally, you can target the shadow DOM wrapper of ":host" then apply
+        the colors to any attribute of a child element.
+      </p>
+
+      <p>
+        The example below is from the pills component. Color classes are
+        generated to target the background-color of the span element that wraps
+        the content.
+      </p>
+
+      <pre [innerText]="_codeStrings[8]"></pre>
+
+      <h3 id="wpreset">_wpReset.scss</h3>
+
+      <p>
+        Some globally applied styles such as hyperlinks and body background
+        color.
+      </p>
+
+      <p>
+        Also, two stylistic classes are placed here. Just to avoid import
+        inception.
+      </p>
+
+      <pre [innerText]="_codeStrings[9]"></pre>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <h2 id="animation">Angular Animation</h2>
+
+      <p>
+        The use of animation is pretty minimal. It uses the built-in Angular
+        libaries. The main usage is to trigger open/close states of expanding
+        content
+      </p>
+
+      <pre [innerText]="_codeStrings[10]"></pre>
+
+      <p>You can augment with icon swapping within the function.</p>
+
+      <pre [innerText]="_codeStrings[11]"></pre>
+
+      <p>The trigger component and target component.</p>
+
+      <pre [innerText]="_codeStrings[12]"></pre>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <h2 id="ngcontent">ng-content Selectors</h2>
+
+      <p>
+        This can be completely refactored, but I used ng-content selectors to
+        pass specific content to sections of a component.
+      </p>
+
+      <p>Using the component as directing content using "ng-containers."</p>
+      <pre [innerText]="_codeStrings[13]"></pre>
+
+      <p>"ng-content" with selectors to pull in the content.</p>
+      <pre [innerText]="_codeStrings[14]"></pre>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <h2 id="icons">Icon Libary</h2>
+
+      <p>
+        Icons are all SVG paths using the fill property. They are compiled
+        within the 'libary.svg' inside the assets folder.
+      </p>
+
+      <p>
+        Each icon is a symbol element with an ID. The ideal state is have
+        consistent viewBox properties.
+      </p>
+
+      <p>
+        When importing in new icons, remove any style attributes such as fill or
+        stroke.
+      </p>
+
+      <pre [innerText]="_codeStrings[15]"></pre>
+    </div>
+  </div>
+</div>

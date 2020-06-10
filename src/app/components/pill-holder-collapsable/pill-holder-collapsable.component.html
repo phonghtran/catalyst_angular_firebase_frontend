@@ -1,0 +1,29 @@
+<div class="wpdh-pillHolderCollapsable__container" [@_closed]="_closed">
+  <wpdh-pill class="-colorAccentLightRed">Pill </wpdh-pill>
+  <wpdh-pill class="-colorAccentLightRed">Pill </wpdh-pill>
+  <wpdh-pill class="-colorAccentLightPurple">Pill </wpdh-pill>
+  <wpdh-pill class="-colorAccentLightBlue">Pill </wpdh-pill>
+  <wpdh-pill class="-colorTintTealT70">Pill Label Long </wpdh-pill>
+  <wpdh-pill class="-colorAccentLightRed">Pill Label </wpdh-pill>
+  <wpdh-pill class="-colorAccentLightRed">Pill </wpdh-pill>
+  <wpdh-pill class="-colorAccentLightPurple">Pill</wpdh-pill>
+  <wpdh-pill class="-colorAccentLightBlue">Pill </wpdh-pill>
+  <wpdh-pill class="-colorTintTealT70">Pill </wpdh-pill>
+
+  <div
+    class="wpdh-pillHolderCollapsable__linkContainer"
+    [ngClass]="_closed ? '' : '-open'"
+  >
+    <wpdh-icon
+      (click)="changeExpandState()"
+      [icon]="_iconPath"
+      [count]="_iconDisplay"
+      class="wpdh-pillHolderCollapsable__linkCollapse"
+      [ngClass]="
+        _closed
+          ? '-colorSupportingWhite -textSupportingWhite -md'
+          : '-colorSupportingBlack -round -backgroundSupportingWhite -open'
+      "
+    ></wpdh-icon>
+  </div>
+</div>

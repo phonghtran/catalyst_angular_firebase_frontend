@@ -1,0 +1,71 @@
+// Primary Colors
+
+$colorPrimaryBlack: #012834;
+$colorPrimaryGreen: #4bcd3e;
+
+// Accent Colors
+$colorAccentDeepBlue: #1b1b6f;
+$colorAccentLightBlue: #3bcff0;
+$colorAccentDarkTeal: #015b7e;
+$colorAccentTeal: #009775;
+$colorAccentCoolGray: #ebebeb;
+$colorAccentWarmGray: #f9f5f1;
+$colorAccentLightRed: #fd8d62;
+$colorAccentSunglow: #ffc845;
+$colorAccentYellow: #ffcd00;
+$colorAccentGreen: #009775;
+$colorAccentRed: #ff1f3e;
+$colorAccentLightPurple: #a18cde;
+
+// Tints
+$colorTintTealT70: #4db69e;
+$colorTintLightRedT80: #fda481;
+$colorTintPrimaryBlackT60: #677e85;
+$colorTintPrimaryBlackT80: #34535e;
+$colorTintPrimaryBlackT90: #1a3e48;
+
+//Shades
+$colorShadePrimaryBlackS20: #01202a;
+$colorShadePrimaryBlackS40: #01181f;
+$colorShadePrimaryBlackS50: #01141a;
+
+// Supporting Colors
+$colorSupportingBlack: #000000;
+$colorSupportingWhite: #ffffff;
+
+@mixin colorClasses($class, $property) {
+  $colors: (
+    "colorPrimaryBlack": $colorPrimaryBlack,
+    "colorPrimaryGreen": $colorPrimaryGreen,
+    "colorAccentDeepBlue": $colorAccentDeepBlue,
+    "colorAccentLightBlue": $colorAccentLightBlue,
+    "colorAccentDarkTeal": $colorAccentDarkTeal,
+    "colorAccentTeal": $colorAccentTeal,
+    "colorAccentCoolGray": $colorAccentCoolGray,
+    "colorAccentWarmGray": $colorAccentWarmGray,
+    "colorAccentLightRed": $colorAccentLightRed,
+    "colorAccentSunglow": $colorAccentSunglow,
+    "colorAccentYellow": $colorAccentYellow,
+    "colorAccentGreen": $colorAccentGreen,
+    "colorAccentRed": $colorAccentRed,
+    "colorAccentLightPurple": $colorAccentLightPurple,
+    "colorTintTealT70": $colorTintTealT70,
+    "colorTintLightRedT80": $colorTintLightRedT80,
+    "colorTintPrimaryBlackT60": $colorTintPrimaryBlackT60,
+    "colorTintPrimaryBlackT80": $colorTintPrimaryBlackT80,
+    "colorTintPrimaryBlackT90": $colorTintPrimaryBlackT90,
+    "colorShadePrimaryBlackS20": $colorShadePrimaryBlackS20,
+    "colorShadePrimaryBlackS40": $colorShadePrimaryBlackS40,
+    "colorShadePrimaryBlackS50": $colorShadePrimaryBlackS50,
+    "colorSupportingBlack": $colorSupportingBlack,
+    "colorSupportingWhite": $colorSupportingWhite,
+  );
+
+  @each $color, $value in $colors {
+    &.-#{$color} {
+      #{$class} {
+        #{$property}: #{$value};
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+<a
+  (mouseenter)="isHover(true)"
+  (mouseleave)="isHover(false)"
+  [attr.href]="href"
+  class="d-flex align-items-center -fontSmall"
+>
+  <ng-content></ng-content>
+
+  <wpdh-icon [icon]="icon" [ngClass]="iconClass"> </wpdh-icon>
+</a>

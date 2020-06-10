@@ -1,0 +1,49 @@
+@import "../../../sass/styles";
+
+:host {
+  border-bottom: $hairline solid
+    rgba($color: $colorSupportingWhite, $alpha: 0.2);
+  display: block;
+  padding: spacer(7) 0;
+
+  .wpdh-accordion {
+    &__title {
+      margin-left: spacer(6);
+    }
+
+    &__title,
+    &__date {
+      margin-bottom: 0;
+      margin-top: spacer(1);
+    }
+
+    &__date,
+    &__hiddenContent {
+      margin-left: spacer(6);
+    }
+
+    &__hiddenRow {
+      overflow: hidden;
+    }
+
+    &__hiddenContent {
+      margin-top: spacer(3);
+    }
+  }
+
+  wpdh-icon {
+    cursor: pointer;
+  }
+}
+
+@media (min-width: $screen-md) {
+  :host {
+    .wpdh-accordion {
+      &__date {
+        margin-left: 0;
+        margin-right: spacer(3);
+        text-align: right;
+      }
+    }
+  }
+}

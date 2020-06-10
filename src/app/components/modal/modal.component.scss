@@ -1,0 +1,43 @@
+@import "../../../sass/styles";
+
+:host {
+  .wpdh-modal {
+    &__opacityBlock {
+      background-color: rgba($color: $colorPrimaryBlack, $alpha: 0.8);
+      display: block;
+      height: 100vh;
+      left: 0;
+      position: fixed;
+      top: 0;
+      width: 100vw;
+      z-index: $zindex-modal;
+    }
+
+    &__contentContainer {
+      background-color: $colorShadePrimaryBlackS50;
+      max-height: 90vh;
+      max-width: 90vw;
+      overflow: auto;
+      padding: spacer(5);
+    }
+
+    &__header {
+      margin-bottom: spacer(6);
+
+      wpdh-icon {
+        cursor: pointer;
+        margin-bottom: spacer(3);
+      }
+    }
+  }
+}
+
+@media (min-width: $screen-md) {
+  :host {
+    .wpdh-modal {
+      &__contentContainer {
+        max-width: 28rem;
+      }
+    }
+  }
+}

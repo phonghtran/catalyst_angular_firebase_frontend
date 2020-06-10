@@ -1,0 +1,33 @@
+@import "colors";
+
+.-fontColorGreen {
+  color: $colorAccentTeal;
+}
+
+.-fontColorBlue {
+  color: $colorAccentLightBlue;
+}
+
+body,
+html {
+  background-color: $colorShadePrimaryBlackS20;
+  color: $colorSupportingWhite;
+}
+
+a {
+  color: $colorAccentLightBlue;
+
+  &:active {
+    color: $colorPrimaryGreen;
+  }
+
+  &:visited {
+    color: $colorAccentLightBlue;
+  }
+
+  &:focus,
+  &:hover {
+    color: $colorPrimaryGreen;
+    text-decoration: none;
+  }
+}

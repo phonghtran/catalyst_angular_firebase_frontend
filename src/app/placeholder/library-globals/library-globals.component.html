@@ -1,0 +1,551 @@
+<h1 class="-fontDisplay -fontDisplayLarge">
+  Globals
+</h1>
+
+<ul>
+  <li><a [routerLink]="['/']" fragment="typography">Typography</a></li>
+  <li><a [routerLink]="['/']" fragment="icons">Icons</a></li>
+</ul>
+
+<div class="container-fluid wpdh-playground__componentContainer">
+  <div class="row">
+    <div id="typography" class="col-sm-12">
+      <h2>Typography</h2>
+
+      <h3>Usage</h3>
+      <ul>
+        <li>Use the normal header tags for semantic flow</li>
+        <li>Or the modifier classes for stylistic exceptions</li>
+      </ul>
+
+      <h3>Display Fonts</h3>
+      <p>
+        '-fontDisplay' switches from Source Sans to Titillium Web in all
+        uppercase
+      </p>
+
+      <pre [innerText]="_codeStrings[0]"></pre>
+
+      <h3>Adding Color</h3>
+      <ul>
+        <li>Two classes exist for this</li>
+        <li>'-fontColorGreen' and '-fontColorBlue'</li>
+      </ul>
+
+      <h3>Examples</h3>
+
+      <h1 class="-fontDisplayLarge -fontDisplay">
+        Display Giga (76px/300/95px)
+      </h1>
+      <h1>-fontDisplayLarge</h1>
+
+      <h1 class="-fontDisplayMedium -fontDisplay">
+        Display Mega (54px/300/68px)
+      </h1>
+      <h1>-fontDisplayMedium</h1>
+
+      <h1>h1 (36px/300/45px) -fontXXXLarge</h1>
+      <h2>h2 (28px/300/35px) -fontXXLarge</h2>
+      <h3>h3 (24px/600/36px) -fontXLarge</h3>
+      <h4>h4 (18px/600/23px) -fontLarge</h4>
+      <h5>h5 (16px/600/20px) -fontMedium</h5>
+      <p>paragraph (16px/400/24px)</p>
+      <label for="label">label (14px/600/18px) -fontSmall </label> <br />
+      <span class="-fontXSmall">
+        caption (12px/400/18px) -fontXSmall
+      </span>
+      <br />
+
+      <span class="-fontXXSmall">
+        legal (11px/400/17px) -fontXXSmall
+      </span>
+    </div>
+  </div>
+
+  <div id="icons" class="row">
+    <div class="col-sm-12">
+      <h2>Icons</h2>
+
+      <h3>Attributes</h3>
+      <ul>
+        <li>Supports a string label, positioned centered</li>
+        <li>'-round' adds a border radius to create round icons</li>
+        <li>'-opacity' makes the background transparent to 30%</li>
+      </ul>
+
+      <h3>Sizing</h3>
+
+      <ul>
+        <li>Default is 24px</li>
+        <li>'-sm' = 12px</li>
+        <li>'-md' = 36px</li>
+        <li>'-lg' = 48px</li>
+      </ul>
+
+      <h3>Colors</h3>
+      <ul>
+        <li>Use any of the SASS color variables</li>
+
+        <li>
+          Prefix '-color' with a color name modifies the icon fill. For example:
+          <ul>
+            <li>-colorSupportingWhite</li>
+            <li>-colorAccentLightRed</li>
+          </ul>
+        </li>
+        <li>-textSupportingWhite modifies the text color to white</li>
+        <li>
+          Background color
+          <ul>
+            <li>-backgroundAccentCoolGray</li>
+            <li>-backgroundPrimaryGreen</li>
+            <li>-backgroundAccentRed</li>
+            <li>-backgroundSupportingWhite</li>
+            <li>-backgroundAccentYellow</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h3>Usages</h3>
+
+      <wpdh-icon [icon]="'plus'" class="-sm -colorSupportingWhite"></wpdh-icon>
+      <wpdh-icon [icon]="'plus'" class="-colorSupportingWhite"></wpdh-icon>
+      <wpdh-icon [icon]="'plus'" class="-md -colorSupportingWhite"></wpdh-icon>
+      <wpdh-icon [icon]="'plus'" class="-lg -colorSupportingWhite"></wpdh-icon>
+      <pre [innerText]="_codeStrings[4]"></pre>
+
+      <wpdh-icon [icon]="'facehappy'" class="-colorAccentYellow"></wpdh-icon>
+      <wpdh-icon [icon]="'facehappy'" class="-colorAccentTeal"></wpdh-icon>
+      <wpdh-icon
+        [icon]="'facehappy'"
+        class="-colorAccentLightPurple"
+      ></wpdh-icon>
+      <wpdh-icon [icon]="'facehappy'" class="-colorAccentLightRed"></wpdh-icon>
+      <pre [innerText]="_codeStrings[3]"></pre>
+
+      <wpdh-icon
+        [icon]="'actionNeeded'"
+        class="-backgroundAccentYellow -round"
+      ></wpdh-icon>
+      <pre [innerText]="_codeStrings[1]"></pre>
+
+      <wpdh-icon
+        [icon]="'tagcount'"
+        [count]="9"
+        class="-colorSupportingWhite -textSupportingWhite -md"
+      ></wpdh-icon>
+      <pre [innerText]="_codeStrings[2]"></pre>
+
+      <h3>Current Library</h3>
+
+      <div class="">
+        <div class="iconContainer">
+          <h5>arrow-dropup</h5>
+          <wpdh-icon
+            [icon]="'arrow-dropup'"
+            class="-colorSupportingWhite"
+          ></wpdh-icon
+          ><wpdh-icon
+            [icon]="'arrow-dropup'"
+            class="-colorSupportingWhite -lg"
+          ></wpdh-icon>
+        </div>
+        <div class="iconContainer">
+          <h5>actionNeeded</h5>
+          <wpdh-icon
+            [icon]="'actionNeeded'"
+            class="-colorSupportingWhite"
+          ></wpdh-icon
+          ><wpdh-icon
+            [icon]="'actionNeeded'"
+            class="-colorSupportingWhite -lg"
+          ></wpdh-icon>
+        </div>
+        <div class="iconContainer">
+          <h5>active</h5>
+          <wpdh-icon [icon]="'active'" class="-colorSupportingWhite"></wpdh-icon
+          ><wpdh-icon
+            [icon]="'active'"
+            class="-colorSupportingWhite -lg"
+          ></wpdh-icon>
+        </div>
+        <div class="iconContainer">
+          <h5>api</h5>
+          <wpdh-icon [icon]="'api'" class="-colorSupportingWhite"></wpdh-icon
+          ><wpdh-icon
+            [icon]="'api'"
+            class="-colorSupportingWhite -lg"
+          ></wpdh-icon>
+        </div>
+        <div class="iconContainer">
+          <h5>approval</h5>
+          <wpdh-icon
+            [icon]="'approval'"
+            class="-colorSupportingWhite"
+          ></wpdh-icon
+          ><wpdh-icon
+            [icon]="'approval'"
+            class="-colorSupportingWhite -lg"
+          ></wpdh-icon>
+        </div>
+        <div class="iconContainer">
+          <h5>arrow-dropdown</h5>
+          <wpdh-icon
+            [icon]="'arrow-dropdown'"
+            class="-colorSupportingWhite"
+          ></wpdh-icon
+          ><wpdh-icon
+            [icon]="'arrow-dropdown'"
+            class="-colorSupportingWhite -lg"
+          ></wpdh-icon>
+        </div>
+        <div class="iconContainer">
+          <h5>arrow-right</h5>
+          <wpdh-icon
+            [icon]="'arrow-right'"
+            class="-colorSupportingWhite"
+          ></wpdh-icon
+          ><wpdh-icon
+            [icon]="'arrow-right'"
+            class="-colorSupportingWhite -lg"
+          ></wpdh-icon>
+        </div>
+        <div class="iconContainer">
+          <h5>bag</h5>
+          <wpdh-icon [icon]="'bag'" class="-colorSupportingWhite"></wpdh-icon
+          ><wpdh-icon
+            [icon]="'bag'"
+            class="-colorSupportingWhite -lg"
+          ></wpdh-icon>
+        </div>
+        <div class="iconContainer">
+          <h5>check</h5>
+          <wpdh-icon [icon]="'check'" class="-colorSupportingWhite"></wpdh-icon
+          ><wpdh-icon
+            [icon]="'check'"
+            class="-colorSupportingWhite -lg"
+          ></wpdh-icon>
+        </div>
+        <div class="iconContainer">
+          <h5>clear</h5>
+          <wpdh-icon [icon]="'clear'" class="-colorSupportingWhite"></wpdh-icon
+          ><wpdh-icon
+            [icon]="'clear'"
+            class="-colorSupportingWhite -lg"
+          ></wpdh-icon>
+        </div>
+        <div class="iconContainer">
+          <h5>close</h5>
+          <wpdh-icon [icon]="'close'" class="-colorSupportingWhite"></wpdh-icon
+          ><wpdh-icon
+            [icon]="'close'"
+            class="-colorSupportingWhite -lg"
+          ></wpdh-icon>
+        </div>
+        <div class="iconContainer">
+          <h5>code</h5>
+          <wpdh-icon [icon]="'code'" class="-colorSupportingWhite"></wpdh-icon
+          ><wpdh-icon
+            [icon]="'code'"
+            class="-colorSupportingWhite -lg"
+          ></wpdh-icon>
+        </div>
+        <div class="iconContainer">
+          <h5>coin</h5>
+          <wpdh-icon [icon]="'coin'" class="-colorSupportingWhite"></wpdh-icon
+          ><wpdh-icon
+            [icon]="'coin'"
+            class="-colorSupportingWhite -lg"
+          ></wpdh-icon>
+        </div>
+        <div class="iconContainer">
+          <h5>complete</h5>
+          <wpdh-icon
+            [icon]="'complete'"
+            class="-colorSupportingWhite"
+          ></wpdh-icon
+          ><wpdh-icon
+            [icon]="'complete'"
+            class="-colorSupportingWhite -lg"
+          ></wpdh-icon>
+        </div>
+        <div class="iconContainer">
+          <h5>copy</h5>
+          <wpdh-icon [icon]="'copy'" class="-colorSupportingWhite"></wpdh-icon
+          ><wpdh-icon
+            [icon]="'copy'"
+            class="-colorSupportingWhite -lg"
+          ></wpdh-icon>
+        </div>
+        <div class="iconContainer">
+          <h5>double-arrow</h5>
+          <wpdh-icon
+            [icon]="'double-arrow'"
+            class="-colorSupportingWhite"
+          ></wpdh-icon
+          ><wpdh-icon
+            [icon]="'double-arrow'"
+            class="-colorSupportingWhite -lg"
+          ></wpdh-icon>
+        </div>
+        <div class="iconContainer">
+          <h5>email</h5>
+          <wpdh-icon [icon]="'email'" class="-colorSupportingWhite"></wpdh-icon
+          ><wpdh-icon
+            [icon]="'email'"
+            class="-colorSupportingWhite -lg"
+          ></wpdh-icon>
+        </div>
+
+        <div class="iconContainer">
+          <h5>facebook</h5>
+          <wpdh-icon
+            [icon]="'facebook'"
+            class="-colorSupportingWhite"
+          ></wpdh-icon
+          ><wpdh-icon
+            [icon]="'facebook'"
+            class="-colorSupportingWhite -lg"
+          ></wpdh-icon>
+        </div>
+        <div class="iconContainer">
+          <h5>facehappy</h5>
+          <wpdh-icon
+            [icon]="'facehappy'"
+            class="-colorSupportingWhite"
+          ></wpdh-icon
+          ><wpdh-icon
+            [icon]="'facehappy'"
+            class="-colorSupportingWhite -lg"
+          ></wpdh-icon>
+        </div>
+        <div class="iconContainer">
+          <h5>facesad</h5>
+          <wpdh-icon
+            [icon]="'facesad'"
+            class="-colorSupportingWhite"
+          ></wpdh-icon
+          ><wpdh-icon
+            [icon]="'facesad'"
+            class="-colorSupportingWhite -lg"
+          ></wpdh-icon>
+        </div>
+        <div class="iconContainer">
+          <h5>head</h5>
+          <wpdh-icon [icon]="'head'" class="-colorSupportingWhite"></wpdh-icon
+          ><wpdh-icon
+            [icon]="'head'"
+            class="-colorSupportingWhite -lg"
+          ></wpdh-icon>
+        </div>
+        <div class="iconContainer">
+          <h5>home</h5>
+          <wpdh-icon [icon]="'home'" class="-colorSupportingWhite"></wpdh-icon
+          ><wpdh-icon
+            [icon]="'home'"
+            class="-colorSupportingWhite -lg"
+          ></wpdh-icon>
+        </div>
+        <div class="iconContainer">
+          <h5>hub</h5>
+          <wpdh-icon [icon]="'hub'" class="-colorSupportingWhite"></wpdh-icon
+          ><wpdh-icon
+            [icon]="'hub'"
+            class="-colorSupportingWhite -lg"
+          ></wpdh-icon>
+        </div>
+        <div class="iconContainer">
+          <h5>inactive</h5>
+          <wpdh-icon
+            [icon]="'inactive'"
+            class="-colorSupportingWhite"
+          ></wpdh-icon
+          ><wpdh-icon
+            [icon]="'inactive'"
+            class="-colorSupportingWhite -lg"
+          ></wpdh-icon>
+        </div>
+
+        <div class="iconContainer">
+          <h5>information</h5>
+          <wpdh-icon
+            [icon]="'information'"
+            class="-colorSupportingWhite"
+          ></wpdh-icon
+          ><wpdh-icon
+            [icon]="'information'"
+            class="-colorSupportingWhite -lg"
+          ></wpdh-icon>
+        </div>
+        <div class="iconContainer">
+          <h5>launch</h5>
+          <wpdh-icon [icon]="'launch'" class="-colorSupportingWhite"></wpdh-icon
+          ><wpdh-icon
+            [icon]="'launch'"
+            class="-colorSupportingWhite -lg"
+          ></wpdh-icon>
+        </div>
+        <div class="iconContainer">
+          <h5>less</h5>
+          <wpdh-icon [icon]="'less'" class="-colorSupportingWhite"></wpdh-icon
+          ><wpdh-icon
+            [icon]="'less'"
+            class="-colorSupportingWhite -lg"
+          ></wpdh-icon>
+        </div>
+        <div class="iconContainer">
+          <h5>linkedin</h5>
+          <wpdh-icon
+            [icon]="'linkedin'"
+            class="-colorSupportingWhite"
+          ></wpdh-icon
+          ><wpdh-icon
+            [icon]="'linkedin'"
+            class="-colorSupportingWhite -lg"
+          ></wpdh-icon>
+        </div>
+        <div class="iconContainer">
+          <h5>locationworld</h5>
+          <wpdh-icon
+            [icon]="'locationworld'"
+            class="-colorSupportingWhite"
+          ></wpdh-icon
+          ><wpdh-icon
+            [icon]="'locationworld'"
+            class="-colorSupportingWhite -lg"
+          ></wpdh-icon>
+        </div>
+        <div class="iconContainer">
+          <h5>money</h5>
+          <wpdh-icon [icon]="'money'" class="-colorSupportingWhite"></wpdh-icon
+          ><wpdh-icon
+            [icon]="'money'"
+            class="-colorSupportingWhite -lg"
+          ></wpdh-icon>
+        </div>
+        <div class="iconContainer">
+          <h5>newspaper</h5>
+          <wpdh-icon
+            [icon]="'newspaper'"
+            class="-colorSupportingWhite"
+          ></wpdh-icon
+          ><wpdh-icon
+            [icon]="'newspaper'"
+            class="-colorSupportingWhite -lg"
+          ></wpdh-icon>
+        </div>
+        <div class="iconContainer">
+          <h5>onlinepayments</h5>
+          <wpdh-icon
+            [icon]="'onlinepayments'"
+            class="-colorSupportingWhite"
+          ></wpdh-icon
+          ><wpdh-icon
+            [icon]="'onlinepayments'"
+            class="-colorSupportingWhite -lg"
+          ></wpdh-icon>
+        </div>
+        <div class="iconContainer">
+          <h5>plus</h5>
+          <wpdh-icon [icon]="'plus'" class="-colorSupportingWhite"></wpdh-icon
+          ><wpdh-icon
+            [icon]="'plus'"
+            class="-colorSupportingWhite -lg"
+          ></wpdh-icon>
+        </div>
+        <div class="iconContainer">
+          <h5>research</h5>
+          <wpdh-icon
+            [icon]="'research'"
+            class="-colorSupportingWhite"
+          ></wpdh-icon
+          ><wpdh-icon
+            [icon]="'research'"
+            class="-colorSupportingWhite -lg"
+          ></wpdh-icon>
+        </div>
+        <div class="iconContainer">
+          <h5>rocket</h5>
+          <wpdh-icon [icon]="'rocket'" class="-colorSupportingWhite"></wpdh-icon
+          ><wpdh-icon
+            [icon]="'rocket'"
+            class="-colorSupportingWhite -lg"
+          ></wpdh-icon>
+        </div>
+
+        <div class="iconContainer">
+          <h5>search</h5>
+          <wpdh-icon [icon]="'search'" class="-colorSupportingWhite"></wpdh-icon
+          ><wpdh-icon
+            [icon]="'search'"
+            class="-colorSupportingWhite -lg"
+          ></wpdh-icon>
+        </div>
+        <div class="iconContainer">
+          <h5>security</h5>
+          <wpdh-icon
+            [icon]="'security'"
+            class="-colorSupportingWhite"
+          ></wpdh-icon
+          ><wpdh-icon
+            [icon]="'security'"
+            class="-colorSupportingWhite -lg"
+          ></wpdh-icon>
+        </div>
+
+        <div class="iconContainer">
+          <h5>tagcount</h5>
+          <wpdh-icon
+            [icon]="'tagcount'"
+            class="-colorSupportingWhite"
+          ></wpdh-icon
+          ><wpdh-icon
+            [icon]="'tagcount'"
+            class="-colorSupportingWhite -lg"
+          ></wpdh-icon>
+        </div>
+
+        <div class="iconContainer">
+          <h5>tools</h5>
+          <wpdh-icon [icon]="'tools'" class="-colorSupportingWhite"></wpdh-icon
+          ><wpdh-icon
+            [icon]="'tools'"
+            class="-colorSupportingWhite -lg"
+          ></wpdh-icon>
+        </div>
+        <div class="iconContainer">
+          <h5>twitter</h5>
+          <wpdh-icon
+            [icon]="'twitter'"
+            class="-colorSupportingWhite"
+          ></wpdh-icon
+          ><wpdh-icon
+            [icon]="'twitter'"
+            class="-colorSupportingWhite -lg"
+          ></wpdh-icon>
+        </div>
+        <div class="iconContainer">
+          <h5>user</h5>
+          <wpdh-icon [icon]="'user'" class="-colorSupportingWhite"></wpdh-icon
+          ><wpdh-icon
+            [icon]="'user'"
+            class="-colorSupportingWhite -lg"
+          ></wpdh-icon>
+        </div>
+        <div class="iconContainer">
+          <h5>webhook</h5>
+          <wpdh-icon
+            [icon]="'webhook'"
+            class="-colorSupportingWhite"
+          ></wpdh-icon
+          ><wpdh-icon
+            [icon]="'webhook'"
+            class="-colorSupportingWhite -lg"
+          ></wpdh-icon>
+        </div>
+      </div>
+
+      <!-- end white -->
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="wpdh-libraryNav d-flex justify-content-md-between">
+  <div>
+    <a [routerLink]="['/']">Globals</a>
+    <a [routerLink]="['/components/']">Components</a>
+    <a [routerLink]="['/reference/']">Reference</a>
+  </div>
+  <div>
+    <a *ngIf="!isLoggedIn" [routerLink]="['/login/']">Login</a>
+    <a *ngIf="isLoggedIn" (click)="logout()">Logout</a>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

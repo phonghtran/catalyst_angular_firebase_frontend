@@ -1,0 +1,126 @@
+@import "../../../sass/styles";
+
+$opacity: 0.3;
+
+:host {
+  display: inline-block;
+  height: spacer(5);
+  position: relative;
+  width: spacer(5);
+
+  &.-floatLeft {
+    float: left;
+  }
+
+  .wpdh-icon {
+    &__label {
+      color: $colorSupportingBlack;
+      position: absolute;
+      text-align: center;
+      top: 0;
+      width: 100%;
+    }
+  }
+
+  &.-textSupportingWhite {
+    .wpdh-icon {
+      &__label {
+        color: $colorSupportingWhite;
+      }
+    }
+  }
+
+  @include colorClasses("svg > * ", "fill");
+
+  svg {
+    all: inherit;
+    background-color: transparent;
+    display: inline-block;
+  }
+
+  &.-round {
+    border-radius: spacer(3);
+
+    svg {
+      height: calc(#{spacer(3)} * 0.8);
+      margin: calc(#{spacer(2)} * 1.1) 0 0 calc(#{spacer(2)} * 1.2);
+      position: absolute;
+      width: calc(#{spacer(3)} * 0.8);
+    }
+  }
+
+  &.-sm {
+    height: spacer(3);
+    width: spacer(3);
+  }
+
+  &.-md {
+    height: spacer(6);
+    width: spacer(6);
+
+    .wpdh-icon {
+      &__label {
+        top: spacer(2);
+      }
+    }
+  }
+
+  &.-lg {
+    height: spacer(7);
+    width: spacer(7);
+
+    &.-round {
+      border-radius: spacer(7);
+
+      svg {
+        height: calc(#{spacer(5)} * 0.8);
+        margin: calc(#{spacer(7)} * 0.3) 0 0 calc(#{spacer(7)} * 0.3);
+        position: absolute;
+        width: calc(#{spacer(5)} * 0.8);
+      }
+    }
+  }
+
+  &.-backgroundAccentCoolGray {
+    background-color: $colorAccentCoolGray;
+
+    &.-opacity {
+      background-color: rgba($colorAccentCoolGray, $opacity);
+    }
+  }
+  &.-backgroundPrimaryGreen {
+    background-color: $colorPrimaryGreen;
+
+    &.-opacity {
+      background-color: rgba($colorAccentCoolGray, $opacity);
+    }
+  }
+  &.-backgroundAccentRed {
+    background-color: $colorAccentRed;
+
+    &.-opacity {
+      background-color: rgba($colorAccentRed, $opacity);
+    }
+  }
+  &.-backgroundSupportingWhite {
+    background-color: $colorSupportingWhite;
+
+    &.-opacity {
+      background-color: rgba($colorSupportingWhite, $opacity);
+    }
+  }
+  &.-backgroundAccentYellow {
+    background-color: $colorAccentYellow;
+
+    &.-opacity {
+      background-color: rgba($colorAccentYellow, $opacity);
+    }
+  }
+  &.-backgroundTintPrimaryBlackT60 {
+    background-color: $colorTintPrimaryBlackT60;
+
+    &.-opacity {
+      background-color: rgba($colorTintPrimaryBlackT60, $opacity);
+    }
+  }
+}

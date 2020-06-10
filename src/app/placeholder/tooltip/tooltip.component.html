@@ -1,0 +1,14 @@
+<div
+  #tooltipContainer
+  class="wpdh-tooltip__container"
+  [ngStyle]="{
+    left: computedLocation.x + 'px',
+    top: computedLocation.y + 'px'
+  }"
+>
+  <svg class="wpdh-tooltip__svg" [attr.viewBox]="svgChar.viewBox">
+    <path [attr.d]="svgChar.d"></path>
+  </svg>
+
+  <ng-content></ng-content>
+</div>

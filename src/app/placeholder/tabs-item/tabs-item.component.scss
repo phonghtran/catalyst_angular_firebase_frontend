@@ -1,0 +1,23 @@
+@import "../../../sass/styles";
+
+:host {
+  &.-active {
+    .wpdh-tabItem {
+      &__container {
+        border-bottom: $borderWidth solid $colorSupportingWhite;
+      }
+    }
+  }
+  .wpdh-tabItem {
+    &__container {
+      border-bottom: $hairline solid $colorSupportingWhite;
+      cursor: pointer;
+      padding: spacer(3) spacer(5);
+
+      &:hover {
+        border-bottom-color: $colorPrimaryGreen;
+        color: $colorPrimaryGreen;
+      }
+    }
+  }
+}

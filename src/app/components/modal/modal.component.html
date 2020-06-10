@@ -1,0 +1,33 @@
+<div
+  class="wpdh-modal__opacityBlock d-flex justify-content-center align-items-center"
+>
+  <div class="wpdh-modal__contentContainer">
+    <div
+      class="wpdh-modal__header d-flex justify-content-between align-items-end"
+    >
+      <div>
+        <span class="-fontXSmall"
+          ><ng-content select="[currentPage]"></ng-content
+        ></span>
+
+        <h3 class="-fontColorBlue mt-0 mb-0">
+          <ng-content select="[title]"></ng-content>
+        </h3>
+      </div>
+
+      <wpdh-icon
+        (click)="placeholderDismiss()"
+        [icon]="'close'"
+        class="-colorSupportingWhite -sm"
+      ></wpdh-icon>
+    </div>
+
+    <form>
+      <ng-content select="[content]"></ng-content>
+
+      <wpdh-button (click)="placeholderDismiss()">
+        <ng-content select="[submitLabel]"></ng-content
+      ></wpdh-button>
+    </form>
+  </div>
+</div>

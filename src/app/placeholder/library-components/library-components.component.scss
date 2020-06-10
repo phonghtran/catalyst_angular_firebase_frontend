@@ -1,0 +1,65 @@
+@import "../../../sass/styles";
+
+:host {
+  input {
+    margin-bottom: spacer(4);
+  }
+
+  .wpdh-playground {
+    &__componentContainer {
+      .row {
+        border-left: spacer(3) solid $colorAccentDarkTeal;
+        margin-bottom: spacer(5);
+      }
+    }
+
+    &__navVerticalContainer {
+      width: 100%;
+    }
+
+    &__pagefeedback {
+      background-color: $colorSupportingWhite;
+      padding: spacer(6) 0;
+    }
+
+    &__mastheadContainer {
+      background-color: $colorSupportingBlack;
+      padding: spacer(5) 0;
+    }
+
+    &__falseGrid {
+      border-top: $hairline solid $colorTintPrimaryBlackT60;
+      margin-bottom: spacer(4);
+      div {
+        border-bottom: $hairline solid $colorTintPrimaryBlackT60;
+        padding: spacer(2) 0;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (min-width: $screen-md) {
+  :host {
+    .wpdh-playground {
+      &__mastheadContainer {
+        padding: spacer(5);
+      }
+
+      &__navVerticalContainer {
+        width: 24rem;
+      }
+
+      &__falseGrid {
+        div {
+          width: 50%;
+        }
+      }
+
+      &__cardContainer {
+        padding: 1rem 0;
+        width: 30rem;
+      }
+    }
+  }
+}

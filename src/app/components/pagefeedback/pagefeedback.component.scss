@@ -1,0 +1,29 @@
+@import "../../../sass/styles";
+
+:host {
+  h4 {
+    color: $colorPrimaryBlack;
+    margin-bottom: spacer(4);
+  }
+  wpdh-icon {
+    cursor: pointer;
+  }
+
+  wpdh-icon:first-child {
+    margin-right: spacer(1);
+  }
+  wpdh-icon:last-child {
+    margin-left: spacer(1);
+  }
+  .wpdh-pagefeedback {
+    &__container {
+      text-align: center;
+    }
+
+    &__iconContainer {
+      text-align: left;
+      margin: 0 auto;
+      width: spacer(8);
+    }
+  }
+}

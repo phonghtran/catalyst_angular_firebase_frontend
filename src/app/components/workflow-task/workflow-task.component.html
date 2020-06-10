@@ -1,0 +1,25 @@
+<div class="d-md-flex wpdh-workflowTask__container">
+  <div class="wpdh-workflowTask__card wpdh-workflowTask__step">
+    <div class="d-md-flex align-items-center">
+      <wpdh-icon
+        [icon]="_iconProperties.iconPath"
+        [ngClass]="_iconProperties.className"
+      ></wpdh-icon>
+
+      <h5>Step <ng-content select="[step]"></ng-content></h5>
+    </div>
+  </div>
+
+  <div class="wpdh-workflowTask__card wpdh-workflowTask__content flex-grow-1">
+    <h5><ng-content select="[title]"></ng-content></h5>
+    <p class="-fontSmall">
+      <ng-content select="[description]"></ng-content>
+    </p>
+  </div>
+
+  <div class="wpdh-workflowTask__card wpdh-workflowTask__links">
+    <h5>Helpful Links</h5>
+
+    <p><ng-content select="[links]"></ng-content></p>
+  </div>
+</div>

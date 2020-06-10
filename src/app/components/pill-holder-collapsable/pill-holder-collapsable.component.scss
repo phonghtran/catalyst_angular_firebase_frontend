@@ -1,0 +1,28 @@
+@import "../../../sass/styles";
+
+:host {
+  .wpdh-pillHolderCollapsable {
+    &__container {
+      display: block;
+      overflow: hidden;
+      margin-top: spacer(5);
+      padding-right: spacer(6);
+      position: relative;
+    }
+
+    &__linkContainer {
+      position: absolute;
+      right: 0;
+      top: 0;
+
+      &.-open {
+        bottom: 0;
+
+        top: auto;
+      }
+    }
+    &__linkCollapse {
+      cursor: pointer;
+    }
+  }
+}

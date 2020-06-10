@@ -1,0 +1,53 @@
+@import "../../../sass/styles";
+
+:host {
+  .wpdh-grid {
+    &__container {
+      overflow: auto;
+      width: 95%;
+    }
+  }
+
+  table {
+    border-radius: spacer(3);
+    thead {
+      tr {
+        th:first-child {
+          border-top-left-radius: spacer(3);
+        }
+
+        th:last-child {
+          border-top-right-radius: spacer(3);
+        }
+
+        th {
+          background-color: $colorShadePrimaryBlackS50;
+          padding: spacer(3) spacer(6);
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        td {
+          background-color: $colorShadePrimaryBlackS40;
+          border-bottom: $hairline solid $colorTintPrimaryBlackT60;
+          padding: spacer(3) spacer(6);
+        }
+      }
+
+      tr:last-child {
+        td:first-child {
+          border-bottom-left-radius: spacer(3);
+        }
+        td:last-child {
+          border-bottom-right-radius: spacer(3);
+        }
+
+        td {
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+}

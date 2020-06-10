@@ -1,0 +1,14 @@
+<div
+  class="wpdh-buttonBigIcon__container"
+  (mouseenter)="mouseEnter()"
+  (mouseleave)="mouseLeave()"
+>
+  <wpdh-icon
+    [icon]="icon"
+    class="-colorPrimaryGreen -lg -round -opacity"
+    [ngClass]="_hoverColor"
+  ></wpdh-icon>
+  <p>
+    <ng-content></ng-content>
+  </p>
+</div>

@@ -1,0 +1,15 @@
+@import "../../../sass/styles";
+
+:host {
+  .wpdh-workflow {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: $screen-md) {
+  :host:not(.-vertical) {
+    .wpdh-workflow {
+      flex-direction: row;
+    }
+  }
+}

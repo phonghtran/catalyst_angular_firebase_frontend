@@ -1,0 +1,25 @@
+@import "../../../sass/styles";
+
+:host {
+  @include colorClasses("span", "background-color");
+
+  span {
+    border-radius: 1rem;
+    color: $colorShadePrimaryBlackS40;
+    display: inline-block;
+    margin: 0 spacer(2) spacer(3) 0;
+    padding: spacer(2) spacer(5);
+
+    wpdh-icon {
+      display: none;
+    }
+
+    &.-canClick {
+      cursor: pointer;
+
+      wpdh-icon {
+        display: inline-block;
+      }
+    }
+  }
+}

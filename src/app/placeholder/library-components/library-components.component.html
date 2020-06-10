@@ -1,0 +1,896 @@
+<h1 id="components" class="-fontDisplay -fontDisplayLarge">
+  Components
+</h1>
+
+<ul>
+  <li><a [routerLink]="['/components/']" fragment="accordion">Accordion</a></li>
+  <li>
+    <a [routerLink]="['/components/']" fragment="breadcrumbs">Breadcrumbs</a>
+  </li>
+
+  <li><a [routerLink]="['/components/']" fragment="buttons">Buttons</a></li>
+  <li>
+    <a [routerLink]="['/components/']" fragment="buttonsBig"
+      >Button with Big Icon</a
+    >
+  </li>
+  <li>
+    <a [routerLink]="['/components/']" fragment="cards">Cards (Placeholder)</a>
+  </li>
+  <li><a [routerLink]="['/components/']" fragment="footer">Footer</a></li>
+  <li><a [routerLink]="['/components/']" fragment="grid">Grid</a></li>
+
+  <li>
+    <a [routerLink]="['/components/']" fragment="linkIcon"
+      >Link with Icon (Placeholder)</a
+    >
+  </li>
+  <li><a [routerLink]="['/components/']" fragment="masthead">Masthead</a></li>
+  <li><a [routerLink]="['/components/']" fragment="modal">Modal</a></li>
+  <li>
+    <a [routerLink]="['/components/']" fragment="notifications"
+      >Notifications</a
+    >
+  </li>
+  <li>
+    <a [routerLink]="['/components/']" fragment="pagefeedback">Page Feedback</a>
+  </li>
+  <li>
+    <a [routerLink]="['/components/']" fragment="pill">Pill (Placeholder)</a>
+  </li>
+  <li>
+    <a [routerLink]="['/components/']" fragment="pillContainer"
+      >Pill Container - Collapsable</a
+    >
+  </li>
+  <li>
+    <a [routerLink]="['/components/']" fragment="sectionCollapsable"
+      >Section - Collapsable</a
+    >
+  </li>
+  <li><a [routerLink]="['/components/']" fragment="tabs">Tabs</a></li>
+  <li><a [routerLink]="['/components/']" fragment="tags">Tags</a></li>
+  <li><a [routerLink]="['/components/']" fragment="tooltip">Tooltip</a></li>
+  <li>
+    <a [routerLink]="['/components/']" fragment="verticalNav">Vertical Nav</a>
+  </li>
+  <li>
+    <a [routerLink]="['/components/']" fragment="workflowVert"
+      >Workflow Diagram (Forced Vertical with Statuses)</a
+    >
+  </li>
+  <li>
+    <a [routerLink]="['/components/']" fragment="workflowHorz"
+      >Workflow Diagram (Horizontal / No Checkmarks)</a
+    >
+  </li>
+</ul>
+<div class="container-fluid wpdh-playground__componentContainer">
+  <div id="accordion" class="row">
+    <div class="col-sm-12">
+      <h2>Accordion</h2>
+
+      <p>
+        Accepts an array of objects to generate content.
+      </p>
+
+      <wpdh-accordion [items]="_accordionItems"> </wpdh-accordion>
+    </div>
+  </div>
+
+  <div id="breadcrumbs" class="row">
+    <div class="col-sm-12">
+      <h2>Breadcrumbs</h2>
+
+      <p>Pass an array of labels and URLs.</p>
+      <wpdh-breadcrumb [items]="_breadcrumbItems"></wpdh-breadcrumb>
+
+      <p>Set the flag for 'showHome' for the icon.</p>
+
+      <wpdh-breadcrumb
+        [showHome]="true"
+        [items]="_breadcrumbItemsHomeOnly"
+      ></wpdh-breadcrumb>
+    </div>
+  </div>
+
+  <div id="buttons" class="row">
+    <div class="col-sm-12">
+      <h2>Buttons</h2>
+      <wpdh-button>Primary</wpdh-button>
+
+      <wpdh-button [disabled]="true">Primary Disabled</wpdh-button>
+
+      <p class="m-3"></p>
+      <wpdh-button [className]="'-outline'">Class Outline</wpdh-button>
+      <wpdh-button [className]="'-outline'" [disabled]="true"
+        >Test Label</wpdh-button
+      >
+
+      <p class="m-3"></p>
+      <wpdh-button [className]="'-white'">Class White</wpdh-button>
+      <wpdh-button [className]="'-white'" [disabled]="true"
+        >Test Label</wpdh-button
+      >
+
+      <p class="m-3"></p>
+      <wpdh-button [className]="'-outline -white'"
+        >Class Outline & white</wpdh-button
+      >
+      <wpdh-button [className]="'-outline -white'" [disabled]="true"
+        >Test Label</wpdh-button
+      >
+    </div>
+  </div>
+
+  <div id="buttonsBig" class="row">
+    <div class="col-sm-12">
+      <h2>Button with Big Icon</h2>
+
+      <wpdh-button-big-icon icon="arrow-dropup">Go top</wpdh-button-big-icon>
+      <wpdh-button-big-icon icon="arrow-dropdown"></wpdh-button-big-icon>
+    </div>
+  </div>
+
+  <div id="cards" class="row">
+    <div class="col-sm-12">
+      <h2>Cards (Placeholder)</h2>
+
+      <p>Use the class '-border' to get full bordered variant.</p>
+
+      <div class="d-md-flex align-items-stretch">
+        <wpdh-card class="-border">
+          <h3>Sit Tight</h3>
+
+          <p>
+            Worldpay is preparing your testing environment. We will notify you
+            when it’s ready.
+          </p>
+
+          <p>
+            <wpdh-link-icon icon="arrow-right"
+              >Read Omni Token API Specifications</wpdh-link-icon
+            >
+            <wpdh-link-icon icon="arrow-right">Download SDKs</wpdh-link-icon>
+          </p>
+        </wpdh-card>
+
+        <wpdh-card class="-border">
+          <p>Granted Access</p>
+
+          <div class="d-flex flex-wrap wpdh-playground__falseGrid">
+            <div>Sandy Ruppeli</div>
+            <div>Caesar Griffin</div>
+            <div>Scott Muehler</div>
+            <div>Jonell Loder</div>
+            <div>Herschel McShane</div>
+            <div>Holly Baal</div>
+          </div>
+
+          <p>
+            <wpdh-link-icon icon="arrow-right"
+              >Manage Permissions</wpdh-link-icon
+            >
+          </p>
+        </wpdh-card>
+      </div>
+
+      <div class="wpdh-playground__cardContainer">
+        <wpdh-card class="-border">
+          <wpdh-icon
+            [icon]="'onlinepayments'"
+            class="-colorPrimaryGreen -lg"
+          ></wpdh-icon>
+
+          <h3 class="mt-0">Cards will match the parent width</h3>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+            neque quis, ratione reprehenderit cum dolore sed dolorum cumque
+            exercitationem culpa libero voluptatibus temporibus, consectetur
+            veritatis architecto reiciendis debitis provident delectus!
+          </p>
+        </wpdh-card>
+      </div>
+
+      <div class="d-md-flex">
+        <wpdh-card>
+          <div class="d-md-flex justify-content-between align-items-center">
+            <h4>Title</h4>
+            <wpdh-link-icon icon="arrow-right">Overview</wpdh-link-icon>
+          </div>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+            eligendi, soluta, incidunt, possimus tempore minima aut qui
+            consectetur adipisci nam repellendus est maiores nisi aperiam quos
+            harum. Sapiente, quo voluptates.
+          </p>
+
+          <wpdh-pill-holder-collapsable> </wpdh-pill-holder-collapsable>
+        </wpdh-card>
+        <wpdh-card>
+          <div class="d-md-flex justify-content-between align-items-center">
+            <h4>Title</h4>
+            <wpdh-link-icon icon="arrow-right">Overview</wpdh-link-icon>
+          </div>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+            eligendi, soluta, incidunt, possimus tempore minima aut qui
+            consectetur adipisci nam repellendus est maiores nisi aperiam quos
+            harum. Sapiente, quo voluptates.
+          </p>
+
+          <wpdh-pill-holder-collapsable> </wpdh-pill-holder-collapsable>
+        </wpdh-card>
+        <wpdh-card>
+          <div class="d-md-flex justify-content-between align-items-center">
+            <h4>Title</h4>
+            <wpdh-link-icon icon="arrow-right">Overview</wpdh-link-icon>
+          </div>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+            eligendi, soluta, incidunt, possimus tempore minima aut qui
+            consectetur adipisci nam repellendus est maiores nisi aperiam quos
+            harum. Sapiente, quo voluptates.
+          </p>
+
+          <wpdh-pill-holder-collapsable> </wpdh-pill-holder-collapsable>
+        </wpdh-card>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer" class="row">
+    <div class="col-sm-12">
+      <h2>Footer</h2>
+
+      <p>Just static content for now.</p>
+
+      <wpdh-footer></wpdh-footer>
+    </div>
+  </div>
+
+  <div id="grid" class="row">
+    <div class="col-sm-12">
+      <h2>Grid</h2>
+
+      <p>
+        Sorting not implemented as unsure of the incoming data structure. Visual
+        placeholder of icons for now.
+      </p>
+
+      <h3>Example</h3>
+
+      <wpdh-grid></wpdh-grid>
+    </div>
+  </div>
+
+  <div id="linkIcon" class="row">
+    <div class="col-sm-12">
+      <h2>Link with Icon (Placeholder)</h2>
+
+      <wpdh-link-icon icon="arrow-right" [href]="'#'"
+        >Learn More</wpdh-link-icon
+      >
+    </div>
+  </div>
+
+  <div id="masthead" class="row">
+    <div class="col-sm-12">
+      <h2>Masthead</h2>
+
+      <p>Pass a file path to 'image' to include a background image.</p>
+
+      <p>
+        Scroll button checks if the window scroll position is past 90% of the
+        masthead height, and disables itself. Smooth scrolling not fully
+        supported in IE/Safari.
+      </p>
+
+      <div class="wpdh-playground__mastheadContainer">
+        <h3 class="mb-0">
+          Note
+        </h3>
+
+        <p>
+          This is set inside a generic container with contrasting background
+          color for demonstration purposes.
+        </p>
+
+        <wpdh-masthead [image]="'/assets/stockphotos/handshaking.png'">
+          <div class="col-sm-12 col-md-6 col-md-offset-6">
+            <h1 class="-fontDisplayMedium -fontDisplay">
+              PARTNER APIS
+            </h1>
+
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque
+              maxime laborum magnam accusantium, ipsam voluptas veritatis. Rerum
+              esse laboriosam, pariatur aut dolore, obcaecati amet illum tempore
+              perspiciatis asperiores similique quasi!
+            </p>
+
+            <p><wpdh-button>View Partner APIs</wpdh-button></p>
+          </div>
+        </wpdh-masthead>
+
+        <wpdh-masthead [image]="'/assets/stockphotos/flyingcomputer.png'">
+          <div class="col-sm-12 col-md-6">
+            <wpdh-breadcrumb
+              [showHome]="true"
+              [items]="_breadcrumbItemsHomeOnly"
+            ></wpdh-breadcrumb>
+
+            <h1 class="-fontDisplayMedium -fontDisplay mt-0">
+              What are you trying to do today?
+            </h1>
+
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque
+              maxime laborum magnam accusantium, ipsam voluptas veritatis. Rerum
+              esse laboriosam, pariatur aut dolore, obcaecati amet illum tempore
+              perspiciatis asperiores similique quasi!
+            </p>
+          </div>
+        </wpdh-masthead>
+
+        <wpdh-masthead>
+          <div class="col-sm-12 col-md-7">
+            <wpdh-breadcrumb
+              [showHome]="true"
+              [items]="_breadcrumbItems"
+            ></wpdh-breadcrumb>
+            <h1 class="-fontDisplayMedium -fontDisplay mt-0">
+              Launchpad
+            </h1>
+
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque
+              maxime laborum magnam accusantium, ipsam voluptas veritatis. Rerum
+              esse laboriosam, pariatur aut dolore, obcaecati amet illum tempore
+              perspiciatis asperiores similique quasi!
+            </p>
+          </div>
+
+          <div class="col-sm-12 col-md-3 col-md-offset-1">
+            <h4 class="mb-0">Let’s start a</h4>
+            <h3 class="-fontDisplay -fontColorBlue mt-0">CONVERSATION</h3>
+
+            <p>
+              Selecting the right API solution can be really difficult. We are
+              here to help.
+            </p>
+
+            <wpdh-button class="wpdh-footer__buttonSupport -outline -white"
+              >Request A Call</wpdh-button
+            >
+          </div>
+        </wpdh-masthead>
+
+        <wpdh-masthead>
+          <div class="col-sm-12 col-md-7">
+            <wpdh-breadcrumb
+              [showHome]="true"
+              [items]="_breadcrumbItems"
+            ></wpdh-breadcrumb>
+            <h1 class="-fontDisplayMedium -fontDisplay mt-0">
+              Merchant Boarding API
+            </h1>
+
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque
+              maxime laborum magnam accusantium, ipsam voluptas veritatis.
+            </p>
+
+            <p>
+              <wpdh-button>Get Developer Support</wpdh-button
+              ><wpdh-button class="-outline">Download Logs</wpdh-button>
+            </p>
+          </div>
+
+          <div class="col-sm-12 col-md-3 col-md-offset-1">
+            <h4 class="mb-0">Let’s start a</h4>
+            <h3 class="-fontDisplay -fontColorBlue mt-0">CONVERSATION</h3>
+
+            <p>
+              Selecting the right API solution can be really difficult. We are
+              here to help.
+            </p>
+
+            <wpdh-button class="wpdh-footer__buttonSupport -outline -white"
+              >Request A Call</wpdh-button
+            >
+          </div>
+        </wpdh-masthead>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal" class="row">
+    <div class="col-sm-12">
+      <h2>Modal</h2>
+
+      <wpdh-button (click)="showModal()">View Modal</wpdh-button>
+
+      <wpdh-modal *ngIf="_modalClosed" (dismissEvent)="dismissModal($event)">
+        <ng-container currentPage>Current Page</ng-container>
+        <ng-container title>Title</ng-container>
+        <ng-container content>
+          <p class="-fontSmall">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, odio
+            quasi esse, eaque porro doloremque ut hic impedit sed eos cum
+            perferendis. Atque, laboriosam accusantium! Doloribus sit molestiae
+            est alias?
+          </p>
+          <wpdh-input-text class="-fullWidth">
+            <ng-container label>Placeholder Input Field</ng-container>
+          </wpdh-input-text>
+          <wpdh-input-text>
+            <ng-container label>Placeholder Input Field</ng-container>
+          </wpdh-input-text>
+          <wpdh-input-text>
+            <ng-container label>Placeholder Input Field</ng-container>
+          </wpdh-input-text>
+        </ng-container>
+        <ng-container submitLabel>Submit</ng-container>
+      </wpdh-modal>
+    </div>
+  </div>
+
+  <div id="notifications" class="row">
+    <div class="col-sm-12">
+      <h2>Notifications</h2>
+
+      <p>Use any color modifier class to change the color.</p>
+
+      <wpdh-notifications class="-colorAccentLightRed">
+        <ng-container category>Important</ng-container>
+        <ng-container description
+          >This is the documentation for the latest version 6. Documentation for
+          the previous version can be found.</ng-container
+        >
+      </wpdh-notifications>
+      <wpdh-notifications class="-colorAccentGreen">
+        <ng-container category>200</ng-container>
+        <ng-container description>Request response is normal.</ng-container>
+      </wpdh-notifications>
+      <wpdh-notifications class="-colorAccentLightBlue">
+        <ng-container category>Notes</ng-container>
+        <ng-container description
+          >The cancellation request has been accepted.</ng-container
+        >
+      </wpdh-notifications>
+    </div>
+  </div>
+
+  <div id="pagefeedback" class="row">
+    <div class="col-sm-12">
+      <h2>Page Feedback</h2>
+
+      <div class="wpdh-playground__pagefeedback">
+        <wpdh-pagefeedback></wpdh-pagefeedback>
+      </div>
+    </div>
+  </div>
+
+  <div id="pill" class="row">
+    <div class="col-sm-12">
+      <h2>Pill (Placeholder)</h2>
+
+      <p>No event emitter</p>
+      <wpdh-pill [canClick]="true" class="-colorAccentLightRed"
+        >Clickable
+      </wpdh-pill>
+      <wpdh-pill
+        [canClick]="true"
+        [checked]="true"
+        class="-colorAccentLightPurple"
+        >Clickable and active
+      </wpdh-pill>
+
+      <wpdh-pill class="-colorAccentLightRed">Not clickable </wpdh-pill>
+      <wpdh-pill class="-colorAccentLightRed">Pill label</wpdh-pill>
+      <wpdh-pill class="-colorAccentLightPurple">Pill label</wpdh-pill>
+      <wpdh-pill class="-colorAccentLightBlue">Pill </wpdh-pill>
+      <wpdh-pill class="-colorTintTealT70">Pill </wpdh-pill>
+    </div>
+  </div>
+
+  <div id="pillContainer" class="row">
+    <div class="col-sm-12">
+      <h2>Pill Container - Collapsable</h2>
+
+      <p>Will match the width of its parent container</p>
+
+      <div style="width: 18rem;">
+        <wpdh-pill-holder-collapsable> </wpdh-pill-holder-collapsable>
+      </div>
+    </div>
+  </div>
+
+  <div id="sectionCollapsable" class="row">
+    <div class="col-sm-12">
+      <h2>Section - Collapsable</h2>
+
+      <wpdh-sectionCollapsable></wpdh-sectionCollapsable>
+    </div>
+  </div>
+
+  <div id="tabs" class="row">
+    <div class="col-sm-12">
+      <h2>Tabs</h2>
+
+      <p>
+        No click switching. Might need refactoring based on the data structure
+        and the behaviors need to trigger code sample switching
+      </p>
+
+      <wpdh-tabs>
+        <wpdh-tabs-item class="-active">NodeJS</wpdh-tabs-item>
+        <wpdh-tabs-item>Python</wpdh-tabs-item>
+        <wpdh-tabs-item>Java</wpdh-tabs-item>
+      </wpdh-tabs>
+    </div>
+  </div>
+
+  <div id="tags" class="row">
+    <div class="col-sm-12">
+      <h2>Tags</h2>
+
+      <p>Use any color modifier class to change the color.</p>
+
+      <wpdh-tag class="-colorAccentLightRed">Label</wpdh-tag>
+      <wpdh-tag class="-colorAccentDarkTeal">Label</wpdh-tag>
+      <wpdh-tag class="-colorAccentSunglow">Label</wpdh-tag>
+      <wpdh-tag class="-colorAccentLightPurple">Label</wpdh-tag>
+      <wpdh-tag class="-colorPrimaryGreen">Label</wpdh-tag>
+    </div>
+  </div>
+
+  <div id="tooltip" class="row">
+    <div class="col-sm-12">
+      <h2>Tooltips</h2>
+      <p>Hover over the components to see the tooltip.</p>
+
+      <p>
+        It detects for window collision. Also, dynamically renders the SVG path
+        to the content size.
+      </p>
+
+      <p>
+        Accepts color class modifier as shown, otherwise defaults to Primary
+        Black.
+      </p>
+
+      <p>
+        Not programmed, but you could add a click state that checks for current
+        state and toggles for mobile. However that depends if you're using
+        dedicated element for tooltips such as a "help icon."
+      </p>
+
+      <p>
+        Also unsure on how you'll want to pass the data to the tooltip. So it's
+        currently embedded, but that can be passed in.
+      </p>
+
+      <div class="d-flex justify-content-between">
+        <wpdh-button
+          (mouseenter)="showTooltip($event)"
+          (mouseleave)="clearTooltip()"
+          >Hover Over Me</wpdh-button
+        >
+
+        <wpdh-icon
+          [icon]="'actionNeeded'"
+          (mouseenter)="showTooltip($event)"
+          (mouseleave)="clearTooltip()"
+          class="-backgroundAccentYellow -round"
+        >
+        </wpdh-icon>
+
+        <wpdh-button
+          (mouseenter)="showTooltip($event)"
+          (mouseleave)="clearTooltip()"
+          >Hover Over Me</wpdh-button
+        >
+      </div>
+
+      <wpdh-tooltip
+        *ngIf="!_tooltipClosed"
+        [location]="_tooltipLocation"
+        class="-colorTintPrimaryBlackT60"
+      >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, dolorem
+        mollitia cupiditate consequuntur quis laudantium fuga magnam, commodi
+        voluptate distinctio minus iste voluptatum voluptas eius sint deleniti
+        rem, laboriosam fugit.
+      </wpdh-tooltip>
+    </div>
+  </div>
+
+  <div id="verticalNav" class="row">
+    <div class="col-sm-12">
+      <h2>Vertical Nav</h2>
+
+      <p>
+        The passing array structure accounts for three levels of nesting, and a
+        flag for showing certain items on load.
+      </p>
+
+      <ul>
+        <li>
+          'active' is the flag to show selected state. Use true if the page
+          being loaded matches to the nav item.
+        </li>
+        <li>
+          'showOnLoad' is the flag to have the menu open on load. (This is
+          separate from 'active' because some nav items represent on page anchor
+          links while others go to different pages.) Each parent should have
+          this flag match as the loop isn't built to check upwards each time.
+        </li>
+      </ul>
+
+      <div class="wpdh-playground__navVerticalContainer">
+        <wpdh-nav-vertical [navItems]="_navItems"> </wpdh-nav-vertical>
+      </div>
+    </div>
+  </div>
+  <div id="workflowVert" class="row">
+    <div class="col-sm-12">
+      <h2>Workflow Diagram (Forced Vertical with Statuses)</h2>
+
+      <p>
+        Vertical and horizontal diagrams are the same. Just use the '-vertical'
+        class to force vertical on desktop.
+      </p>
+      <p>Note: the use of ng-content selectors.</p>
+      <wpdh-workflow class="-vertical">
+        <wpdh-workflow-card class="-vertical" status="active">
+          <ng-container title>Title</ng-container>
+          <ng-container taskCount>(3 of 3 complete)</ng-container>
+          <ng-container description>
+            Lorem ipsum dolor sit amet consect etur, adip isicing
+            elit.</ng-container
+          >
+          <ng-container children>
+            <wpdh-workflow-task status="actionNeeded">
+              <ng-container step>1</ng-container>
+              <ng-container title>Title</ng-container>
+              <ng-container description>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Laborum officia quisquam laudantium vitae mollitia perspiciatis
+                provident assumenda soluta dignissimos eius laboriosam
+                cupiditate, fuga commodi non minus esse ullam. Recusandae, quia.
+              </ng-container>
+              <ng-container links>
+                <wpdh-link-icon icon="arrow-right"
+                  >Read Omni Token API Specifications</wpdh-link-icon
+                >
+                <wpdh-link-icon icon="arrow-right"
+                  >Download SDKs</wpdh-link-icon
+                >
+              </ng-container>
+            </wpdh-workflow-task>
+            <wpdh-workflow-task status="check"
+              ><ng-container step>2</ng-container>
+              <ng-container title>Title</ng-container>
+              <ng-container description>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Laborum officia quisquam laudantium vitae mollitia perspiciatis
+                provident assumenda soluta dignissimos eius laboriosam
+                cupiditate, fuga commodi non minus esse ullam. Recusandae, quia.
+              </ng-container>
+              <ng-container links>
+                <wpdh-link-icon icon="arrow-right"
+                  >Read Omni Token API Specifications</wpdh-link-icon
+                >
+                <wpdh-link-icon icon="arrow-right"
+                  >Download SDKs</wpdh-link-icon
+                >
+              </ng-container>
+            </wpdh-workflow-task>
+            <wpdh-workflow-task>
+              <ng-container step>3</ng-container>
+              <ng-container title>Title</ng-container>
+              <ng-container description>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Laborum officia quisquam laudantium vitae mollitia perspiciatis
+                provident assumenda soluta dignissimos eius laboriosam
+                cupiditate, fuga commodi non minus esse ullam. Recusandae, quia.
+              </ng-container>
+              <ng-container links>
+                <wpdh-link-icon icon="arrow-right"
+                  >Read Omni Token API Specifications</wpdh-link-icon
+                >
+                <wpdh-link-icon icon="arrow-right"
+                  >Download SDKs</wpdh-link-icon
+                >
+              </ng-container></wpdh-workflow-task
+            >
+          </ng-container>
+        </wpdh-workflow-card>
+        <wpdh-workflow-card class="-vertical" status="check">
+          <ng-container title>Title</ng-container>
+          <ng-container taskCount>(3 of 3 complete)</ng-container>
+          <ng-container description>
+            Lorem ipsum dolor sit amet consect etur, adip isicing
+            elit.</ng-container
+          >
+
+          <ng-container children>
+            <wpdh-workflow-task status="actionNeeded">
+              <ng-container step>1</ng-container>
+              <ng-container title>Title</ng-container>
+              <ng-container description>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Laborum officia quisquam laudantium vitae mollitia perspiciatis
+                provident assumenda soluta dignissimos eius laboriosam
+                cupiditate, fuga commodi non minus esse ullam. Recusandae, quia.
+              </ng-container>
+              <ng-container links>
+                <wpdh-link-icon icon="arrow-right"
+                  >Read Omni Token API Specifications</wpdh-link-icon
+                >
+                <wpdh-link-icon icon="arrow-right"
+                  >Download SDKs</wpdh-link-icon
+                >
+              </ng-container>
+            </wpdh-workflow-task>
+            <wpdh-workflow-task status="check"
+              ><ng-container step>2</ng-container>
+              <ng-container title>Title</ng-container>
+              <ng-container description>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Laborum officia quisquam laudantium vitae mollitia perspiciatis
+                provident assumenda soluta dignissimos eius laboriosam
+                cupiditate, fuga commodi non minus esse ullam. Recusandae, quia.
+              </ng-container>
+              <ng-container links>
+                <wpdh-link-icon icon="arrow-right"
+                  >Read Omni Token API Specifications</wpdh-link-icon
+                >
+                <wpdh-link-icon icon="arrow-right"
+                  >Download SDKs</wpdh-link-icon
+                >
+              </ng-container>
+            </wpdh-workflow-task>
+            <wpdh-workflow-task>
+              <ng-container step>3</ng-container>
+              <ng-container title>Title</ng-container>
+              <ng-container description>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Laborum officia quisquam laudantium vitae mollitia perspiciatis
+                provident assumenda soluta dignissimos eius laboriosam
+                cupiditate, fuga commodi non minus esse ullam. Recusandae, quia.
+              </ng-container>
+              <ng-container links>
+                <wpdh-link-icon icon="arrow-right"
+                  >Read Omni Token API Specifications</wpdh-link-icon
+                >
+                <wpdh-link-icon icon="arrow-right"
+                  >Download SDKs</wpdh-link-icon
+                >
+              </ng-container></wpdh-workflow-task
+            >
+          </ng-container>
+        </wpdh-workflow-card>
+
+        <wpdh-workflow-card class="-vertical" order="last"
+          ><ng-container title>Title</ng-container>
+          <ng-container taskCount>(3 of 3 complete)</ng-container>
+          <ng-container description>
+            Lorem ipsum dolor sit amet consect etur, adip isicing
+            elit.</ng-container
+          >
+          <ng-container children>
+            <wpdh-workflow-task status="actionNeeded">
+              <ng-container step>1</ng-container>
+              <ng-container title>Title</ng-container>
+              <ng-container description>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Laborum officia quisquam laudantium vitae mollitia perspiciatis
+                provident assumenda soluta dignissimos eius laboriosam
+                cupiditate, fuga commodi non minus esse ullam. Recusandae, quia.
+              </ng-container>
+              <ng-container links>
+                <wpdh-link-icon icon="arrow-right"
+                  >Read Omni Token API Specifications</wpdh-link-icon
+                >
+                <wpdh-link-icon icon="arrow-right"
+                  >Download SDKs</wpdh-link-icon
+                >
+              </ng-container>
+            </wpdh-workflow-task>
+            <wpdh-workflow-task status="check"
+              ><ng-container step>2</ng-container>
+              <ng-container title>Title</ng-container>
+              <ng-container description>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Laborum officia quisquam laudantium vitae mollitia perspiciatis
+                provident assumenda soluta dignissimos eius laboriosam
+                cupiditate, fuga commodi non minus esse ullam. Recusandae, quia.
+              </ng-container>
+              <ng-container links>
+                <wpdh-link-icon icon="arrow-right"
+                  >Read Omni Token API Specifications</wpdh-link-icon
+                >
+                <wpdh-link-icon icon="arrow-right"
+                  >Download SDKs</wpdh-link-icon
+                >
+              </ng-container>
+            </wpdh-workflow-task>
+            <wpdh-workflow-task>
+              <ng-container step>3</ng-container>
+              <ng-container title>Title</ng-container>
+              <ng-container description>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Laborum officia quisquam laudantium vitae mollitia perspiciatis
+                provident assumenda soluta dignissimos eius laboriosam
+                cupiditate, fuga commodi non minus esse ullam. Recusandae, quia.
+              </ng-container>
+              <ng-container links>
+                <wpdh-link-icon icon="arrow-right"
+                  >Read Omni Token API Specifications</wpdh-link-icon
+                >
+                <wpdh-link-icon icon="arrow-right"
+                  >Download SDKs</wpdh-link-icon
+                >
+              </ng-container></wpdh-workflow-task
+            >
+          </ng-container>
+        </wpdh-workflow-card>
+      </wpdh-workflow>
+    </div>
+  </div>
+
+  <div id="workflowHorz" class="row">
+    <div class="col-sm-12">
+      <h2>Workflow Diagram (Horizontal / No Checkmarks)</h2>
+
+      <p>Turns vertical on small displays</p>
+
+      <wpdh-workflow>
+        <wpdh-workflow-card status="active">
+          <ng-container title>Title</ng-container>
+          <ng-container description>
+            Lorem ipsum dolor sit amet consect etur, adip isicing
+            elit.</ng-container
+          >
+        </wpdh-workflow-card>
+        <wpdh-workflow-card>
+          <ng-container title>Title</ng-container>
+          <ng-container description>
+            Lorem ipsum dolor sit amet consect etur, adip isicing
+            elit.</ng-container
+          >
+        </wpdh-workflow-card>
+
+        <wpdh-workflow-card
+          ><ng-container title>Title</ng-container>
+          <ng-container description>
+            Lorem ipsum dolor sit amet consect etur, adip isicing
+            elit.</ng-container
+          ></wpdh-workflow-card
+        >
+        <wpdh-workflow-card
+          ><ng-container title>Title</ng-container>
+          <ng-container description>
+            Lorem ipsum dolor sit amet consect etur, adip isicing
+            elit.</ng-container
+          ></wpdh-workflow-card
+        >
+
+        <wpdh-workflow-card order="last"
+          ><ng-container title>Title</ng-container>
+          <ng-container description>
+            Lorem ipsum dolor sit amet consect etur, adip isicing
+            elit.</ng-container
+          ></wpdh-workflow-card
+        >
+      </wpdh-workflow>
+    </div>
+  </div>
+</div>

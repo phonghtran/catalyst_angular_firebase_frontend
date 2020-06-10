@@ -1,0 +1,63 @@
+@import "../../../sass/styles";
+
+:host {
+  .wpdh-workflowTask {
+    &__container {
+      background-color: $colorShadePrimaryBlackS50;
+      margin-bottom: spacer(3);
+      padding: spacer(5) 0;
+    }
+
+    &__card {
+      padding: 0 spacer(6);
+    }
+    &__step {
+      wpdh-icon {
+        float: left;
+        margin-right: spacer(3);
+      }
+      h5 {
+        margin: 0;
+      }
+    }
+
+    &__content {
+      margin-top: spacer(5);
+    }
+
+    &__links {
+      border-top: $hairline solid $colorPrimaryGreen;
+      margin: 0 spacer(6);
+      padding: 0;
+    }
+  }
+}
+
+@media (min-width: $screen-md) {
+  :host {
+    .wpdh-workflowTask {
+      &__step {
+        min-width: 12rem;
+
+        wpdh-icon {
+          margin-right: spacer(5);
+        }
+      }
+
+      &__content {
+        margin-top: 0;
+        p {
+          max-width: 22rem;
+        }
+      }
+
+      &__links {
+        border-left: $hairline solid $colorPrimaryGreen;
+        border-top: 0;
+        margin: 0;
+        min-width: 20rem;
+        padding: 0 spacer(6);
+      }
+    }
+  }
+}

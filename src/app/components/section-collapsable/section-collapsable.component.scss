@@ -1,0 +1,17 @@
+@import "../../../sass/styles";
+
+:host {
+  .wpdh-sectionCollapsable {
+    background-color: $colorShadePrimaryBlackS50;
+    padding: 0 spacer(6);
+
+    &__hiddenRow {
+      overflow: hidden;
+    }
+
+    &__linkCollapse {
+      display: block;
+      margin: spacer(5) 0 spacer(6);
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@import "../../../sass/styles";
+
+:host {
+  .wpdh-buttonBigIcon__container {
+    cursor: pointer;
+    width: spacer(7);
+
+    p {
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+<div class="wpdh-workflowCard__card d-flex">
+  <div class="wpdh-workflowCard__status d-flex align-items-stretch">
+    <div>
+      <wpdh-icon
+        [icon]="_iconProperties.iconPath"
+        [ngClass]="_iconProperties.className"
+      ></wpdh-icon>
+    </div>
+    <div
+      *ngIf="order === 'last' ? false : true"
+      class="wpdh-workflowCard__spacer"
+    ></div>
+  </div>
+  <div class="wpdh-workflowCard__content">
+    <p
+      class="wpdh-workflowCard__contentTitle"
+      [ngClass]="{ '-fontSmall': _childrenExist }"
+    >
+      <ng-content select="[title]"></ng-content>
+      &nbsp;
+      <span class="-fontXSmall">
+        <ng-content select="[taskCount]"></ng-content>
+      </span>
+    </p>
+    <p
+      class="-fontXSmall wpdh-workflowCard__contentDescription"
+      [ngClass]="{
+        '-fontXSmall': _childrenExist,
+        '-fontSmall': !_childrenExist
+      }"
+    >
+      <ng-content select="[description]"></ng-content>
+    </p>
+
+    <div [hidden]="_childrenExist">
+      <div
+        #childrenContainer
+        class="wpdh-workflowCard__childrenContainer"
+        [@_closed]="_childrenCollapsedState.closed"
+      >
+        <ng-content select="[children]"></ng-content>
+      </div>
+
+      <wpdh-link-icon
+        class="wpdh-sectionCollapsable__linkCollapse"
+        (click)="changeExpandState()"
+        [icon]="_childrenCollapsedState.iconPath"
+        >{{ _childrenCollapsedState.label }}</wpdh-link-icon
+      >
+    </div>
+  </div>
+</div>

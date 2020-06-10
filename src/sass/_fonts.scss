@@ -1,0 +1,96 @@
+html,
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin-bottom: 1.5rem;
+}
+// Alpha in the Design Component Libary
+h1,
+.-fontXXXLarge {
+  font-size: 2.25rem;
+  font-weight: 300;
+  line-height: 2.8125rem;
+}
+
+// Beta in the Design Component Libary
+h2,
+.-fontXXLarge {
+  font-size: 1.75rem;
+  font-weight: 300;
+  line-height: 2.1875rem;
+}
+
+// Gamma in the Design Component Libary
+h3,
+.-fontXLarge {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 2.25rem;
+}
+
+// Delta in the Design Component Libary
+h4,
+.-fontLarge {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.4375rem;
+}
+
+// Epsilon in the Design Component Libary
+h5,
+.-fontMedium {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+}
+
+// Zeta in the Design Component Libary
+label,
+.-fontSmall {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+}
+
+// Caption in the Design Component Libary
+caption,
+.-fontXSmall {
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.125rem;
+  text-align: left;
+}
+// Legal in the Design Component Libary
+.-fontXXSmall {
+  font-size: 0.6875rem;
+  font-weight: 400;
+  line-height: 1.0625rem;
+}
+
+// Display in the Design Component Libary
+.-fontDisplayLarge {
+  font-size: 4.75rem;
+  font-weight: 900;
+  line-height: 4.75rem;
+}
+
+.-fontDisplayMedium {
+  font-size: 3.375rem;
+  font-weight: 900;
+  line-height: 3.375rem;
+}
+
+.-fontDisplay {
+  font-family: "Titillium Web", sans-serif;
+  text-transform: uppercase;
+}

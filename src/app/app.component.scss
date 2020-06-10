@@ -1,0 +1,31 @@
+@import "../sass/styles";
+
+:host {
+  display: block;
+  padding: spacer(9) spacer(5);
+
+  .wpdh-libraryNav {
+    background-color: $colorPrimaryBlack;
+    left: 0;
+    padding: spacer(3) 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: $zindex-navbar-fixed;
+
+    a {
+      padding: 0 spacer(3);
+    }
+  }
+}
+
+@media (min-width: $screen-md) {
+  :host {
+    .wpdh-libraryNav {
+      a {
+        max-width: auto;
+        padding: 0 spacer(5);
+      }
+    }
+  }
+}

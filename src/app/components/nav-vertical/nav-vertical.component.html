@@ -1,0 +1,71 @@
+<ul
+  *ngFor="let item of navItems; index as itemIndex"
+  class="wpdh-navVertical__menu"
+>
+  <li class="wpdh-navVertical__menuItem">
+    <div
+      class="wpdh-navVertical__menuItemContainer d-flex justify-content-between"
+      [ngClass]="{ '-active': item.active }"
+    >
+      <a
+        class="wpdh-navVertical__menuItemLink -fontMedium"
+        [ngClass]="{ '-active': item.active }"
+        href="{{ item.url }}"
+        >{{ item.label }}</a
+      >
+
+      <wpdh-icon
+        *ngIf="item.children"
+        (click)="toggleChild('p', itemIndex)"
+        [icon]="_closedStates['p'][itemIndex]['icon']"
+        class="-colorSupportingWhite -sm"
+      ></wpdh-icon>
+    </div>
+
+    <ul
+      *ngIf="item.children"
+      [@_closed]="_closedStates['p'][itemIndex]['state']"
+      class="wpdh-navVertical__menuChild"
+    >
+      <ng-container *ngFor="let child of item.children; index as childIndex">
+        <li class="wpdh-navVertical__menuChildItem">
+          <div
+            class="wpdh-navVertical__menuChildItemContainer d-flex align-items-start"
+            [ngClass]="{ '-hasIcon': child.children }"
+          >
+            <wpdh-icon
+              *ngIf="child.children"
+              (click)="toggleChild('c', childIndex)"
+              [icon]="_closedStates['c'][childIndex]['icon']"
+              class="-colorSupportingWhite -sm -floatLeft"
+            ></wpdh-icon>
+
+            <a
+              class="wpdh-navVertical__menuChildItemLink -fontXSmall"
+              [ngClass]="{ '-active': child.active }"
+              href="{{ child.url }}"
+              >{{ child.label }}</a
+            >
+          </div>
+
+          <ul
+            *ngIf="child.children"
+            [@_closed]="_closedStates['c'][childIndex]['state']"
+            class="wpdh-navVertical__menuGrandchild"
+          >
+            <ng-container *ngFor="let grandchild of child.children">
+              <li class="wpdh-navVertical__menuGrandchildItem">
+                <a
+                  class="wpdh-navVertical__menuGrandchildItemLink -fontXSmall"
+                  [ngClass]="{ '-active': grandchild.active }"
+                  href="{{ grandchild.url }}"
+                  >{{ grandchild.label }}</a
+                >
+              </li>
+            </ng-container>
+          </ul>
+        </li>
+      </ng-container>
+    </ul>
+  </li>
+</ul>

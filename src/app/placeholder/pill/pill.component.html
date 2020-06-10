@@ -1,0 +1,15 @@
+<span
+  (click)="toggleCheckedStatus()"
+  class="-fontMedium"
+  [ngClass]="{ '-canClick': canClick }"
+>
+  <ng-content></ng-content>
+
+  <wpdh-icon
+    [icon]="'check'"
+    class="-colorShadePrimaryBlackS20 -sm"
+    [ngClass]="{ hidden: !checked }"
+  ></wpdh-icon>
+</span>
+
+<input type="checkbox" [checked]="checked" class="hidden" />

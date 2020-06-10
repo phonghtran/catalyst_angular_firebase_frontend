@@ -1,0 +1,63 @@
+@import "../../../sass/styles";
+
+// @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss';
+
+:host {
+  button {
+    background-color: $colorPrimaryGreen;
+    border: $borderWidth solid $colorPrimaryGreen;
+    border-radius: spacer(5);
+    color: $colorPrimaryBlack;
+    padding: calc(#{spacer(3)} - #{$borderWidth})
+      calc(#{spacer(6)} - #{$borderWidth});
+    margin: 0 spacer(2) spacer(3) 0;
+
+    &:hover:enabled {
+      background-color: $colorPrimaryBlack;
+      color: $colorSupportingWhite;
+    }
+    &:disabled {
+      opacity: 50%;
+    }
+  }
+
+  &.-white {
+    button {
+      background-color: $colorSupportingWhite;
+      border: $borderWidth solid $colorSupportingWhite;
+
+      &:hover:enabled {
+        background-color: $colorPrimaryBlack;
+      }
+    }
+  }
+
+  &.-outline {
+    button {
+      background-color: $colorPrimaryBlack;
+      border: $borderWidth solid $colorPrimaryGreen;
+      color: $colorSupportingWhite;
+
+      &:hover:enabled {
+        background-color: $colorPrimaryGreen;
+      }
+
+      &:disabled {
+        border: $borderWidth solid $colorSupportingWhite;
+      }
+    }
+
+    &.-white {
+      button {
+        background-color: $colorPrimaryBlack;
+        border: $borderWidth solid $colorSupportingWhite;
+        color: $colorSupportingWhite;
+
+        &:hover:enabled {
+          background-color: $colorSupportingWhite;
+          color: $colorPrimaryBlack;
+        }
+      }
+    }
+  }
+}

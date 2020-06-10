@@ -1,0 +1,17 @@
+<div class="wpdh-pagefeedback__container">
+  <h4>Was this page helpful?</h4>
+  <div class="wpdh-pagefeedback__iconContainer">
+    <wpdh-icon
+      (mouseenter)="mouseEnter(0)"
+      (mouseleave)="mouseLeave(0)"
+      [icon]="'facehappy'"
+      [ngClass]="_hoverColor[0]"
+    ></wpdh-icon>
+    <wpdh-icon
+      (mouseenter)="mouseEnter(1)"
+      (mouseleave)="mouseLeave(1)"
+      [icon]="'facesad'"
+      [ngClass]="_hoverColor[1]"
+    ></wpdh-icon>
+  </div>
+</div>

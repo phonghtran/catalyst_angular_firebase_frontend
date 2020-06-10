@@ -1,0 +1,26 @@
+<ng-container
+  *ngFor="let item of items; index as i; first as isFirst; last as isLast"
+>
+  <ng-container *ngIf="!isLast || items.length === 1">
+    <a
+      href="{{ item.url }}"
+      [ngClass]="{ '-isFirst': isFirst }"
+      (mouseenter)="mouseEnter(i)"
+      (mouseleave)="mouseLeave(i)"
+    >
+      <wpdh-icon
+        *ngIf="showHome && isFirst"
+        [icon]="'home'"
+        [ngClass]="_iconColor"
+        class="-sm"
+      ></wpdh-icon>
+
+      {{ item.label }}</a
+    >
+    <span *ngIf="items.length > 1"> &nbsp;/&nbsp;</span>
+  </ng-container>
+
+  <ng-container *ngIf="isLast && items.length > 1">
+    {{ item.label }}
+  </ng-container>
+</ng-container>

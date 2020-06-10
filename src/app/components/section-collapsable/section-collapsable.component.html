@@ -1,0 +1,169 @@
+<div class="container-fluid wpdh-sectionCollapsable">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="d-md-flex justify-content-between align-items-center">
+        <h1>Title</h1>
+        <wpdh-link-icon icon="arrow-right">Learn More</wpdh-link-icon>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12 col-md-6">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
+        temporibus pariatur adipisci inventore placeat mollitia ad fugiat
+        accusantium facere. Dolore ex sit culpa magnam accusamus facilis, qui
+        eum et deserunt.
+      </p>
+    </div>
+    <div class="col-sm-12 col-md-offset-1 col-md-5">
+      <wpdh-pill class="-colorAccentLightRed">Pill </wpdh-pill>
+      <wpdh-pill class="-colorAccentLightRed">Pill label</wpdh-pill>
+      <wpdh-pill class="-colorAccentLightPurple">Pill label</wpdh-pill>
+      <wpdh-pill class="-colorAccentLightBlue">Pill </wpdh-pill>
+      <wpdh-pill class="-colorTintTealT70">Pill </wpdh-pill>
+    </div>
+  </div>
+
+  <div class="row wpdh-sectionCollapsable__hiddenRow" [@_closed]="_closed">
+    <div class="col-sm-12">
+      <div class="">
+        <div class="row">
+          <div class="col-sm-12">
+            <h2>Technology Workflow</h2>
+
+            <wpdh-workflow>
+              <wpdh-workflow-card status="active"
+                ><ng-container title>Title</ng-container>
+                <ng-container description>
+                  Lorem ipsum dolor sit amet consect etur, adip isicing
+                  elit.</ng-container
+                ></wpdh-workflow-card
+              >
+              <wpdh-workflow-card
+                ><ng-container title>Title</ng-container>
+                <ng-container description>
+                  Lorem ipsum dolor sit amet consect etur, adip isicing
+                  elit.</ng-container
+                ></wpdh-workflow-card
+              >
+              <wpdh-workflow-card
+                ><ng-container title>Title</ng-container>
+                <ng-container description>
+                  Lorem ipsum dolor sit amet consect etur, adip isicing
+                  elit.</ng-container
+                ></wpdh-workflow-card
+              >
+              <wpdh-workflow-card
+                ><ng-container title>Title</ng-container>
+                <ng-container description>
+                  Lorem ipsum dolor sit amet consect etur, adip isicing
+                  elit.</ng-container
+                ></wpdh-workflow-card
+              >
+              <wpdh-workflow-card
+                ><ng-container title>Title</ng-container>
+                <ng-container description>
+                  Lorem ipsum dolor sit amet consect etur, adip isicing
+                  elit.</ng-container
+                ></wpdh-workflow-card
+              >
+
+              <wpdh-workflow-card order="last"
+                ><ng-container title>Title</ng-container>
+                <ng-container description>
+                  Lorem ipsum dolor sit amet consect etur, adip isicing
+                  elit.</ng-container
+                ></wpdh-workflow-card
+              >
+            </wpdh-workflow>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12 col-md-4">
+            <h2>Prerequisites</h2>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi
+              ipsam debitis quis, consequuntur sit nisi dicta. Sequi, deleniti
+              dignissimos minima, labore dolores quo architecto molestias est,
+              laudantium perferendis blanditiis quae!
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12">
+            <h2>Relevant APIS</h2>
+
+            <div class="d-md-flex">
+              <wpdh-card>
+                <div
+                  class="d-md-flex justify-content-between align-items-center"
+                >
+                  <h4>Title</h4>
+                  <wpdh-link-icon icon="arrow-right">Overview</wpdh-link-icon>
+                </div>
+
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Corrupti eligendi, soluta, incidunt, possimus tempore minima
+                  aut qui consectetur adipisci nam repellendus est maiores nisi
+                  aperiam quos harum. Sapiente, quo voluptates.
+                </p>
+
+                <wpdh-pill-holder-collapsable> </wpdh-pill-holder-collapsable>
+              </wpdh-card>
+              <wpdh-card>
+                <div
+                  class="d-md-flex justify-content-between align-items-center"
+                >
+                  <h4>Title</h4>
+                  <wpdh-link-icon icon="arrow-right">Overview</wpdh-link-icon>
+                </div>
+
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Corrupti eligendi, soluta, incidunt, possimus tempore minima
+                  aut qui consectetur adipisci nam repellendus est maiores nisi
+                  aperiam quos harum. Sapiente, quo voluptates.
+                </p>
+
+                <wpdh-pill-holder-collapsable> </wpdh-pill-holder-collapsable>
+              </wpdh-card>
+              <wpdh-card>
+                <div
+                  class="d-md-flex justify-content-between align-items-center"
+                >
+                  <h4>Title</h4>
+                  <wpdh-link-icon icon="arrow-right">Overview</wpdh-link-icon>
+                </div>
+
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Corrupti eligendi, soluta, incidunt, possimus tempore minima
+                  aut qui consectetur adipisci nam repellendus est maiores nisi
+                  aperiam quos harum. Sapiente, quo voluptates.
+                </p>
+
+                <wpdh-pill-holder-collapsable> </wpdh-pill-holder-collapsable>
+              </wpdh-card>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <wpdh-link-icon
+        class="wpdh-sectionCollapsable__linkCollapse"
+        (click)="changeExpandState()"
+        [icon]="_iconPath"
+        >{{ _label }}</wpdh-link-icon
+      >
+    </div>
+  </div>
+</div>

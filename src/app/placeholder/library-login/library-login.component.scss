@@ -1,0 +1,25 @@
+@import "../../../sass/styles";
+
+:host {
+  .header {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+
+  .row {
+    margin-top: 10px;
+  }
+
+  .error {
+    color: red;
+  }
+
+  input {
+    background-color: transparent;
+    border: $hairline solid $colorSupportingWhite;
+    border-radius: $borderWidth;
+    margin: spacer(3) 0 spacer(5);
+    padding: spacer(3);
+  }
+}

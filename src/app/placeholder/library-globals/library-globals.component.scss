@@ -1,0 +1,10 @@
+@import "../../../sass/styles";
+
+:host {
+  .iconContainer {
+    border: $hairline solid $colorSupportingWhite;
+    display: inline-block;
+    padding: spacer(5);
+    width: 13rem;
+  }
+}

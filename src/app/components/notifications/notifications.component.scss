@@ -1,0 +1,21 @@
+@import "../../../sass/styles";
+
+:host {
+  @include colorClasses(".wpdh-notification__container", "border-left-color");
+
+  @include colorClasses(".wpdh-notification__category", "color");
+
+  .wpdh-notification {
+    &__container {
+      background-color: $colorTintPrimaryBlackT80;
+      border-left-style: solid;
+      border-left-width: spacer(2);
+      margin: 0 spacer(2) spacer(2) 0;
+      padding: spacer(4) spacer(4);
+    }
+
+    &__category {
+      margin-right: spacer(3);
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@import "../../../sass/styles";
+
+:host {
+  &.-border {
+    .wpdh-card__container {
+      border: $borderWidth solid rgba($colorSupportingWhite, 0.2);
+      border-radius: spacer(3);
+      padding: spacer(7);
+    }
+  }
+
+  .wpdh-card__container {
+    border-bottom: $borderWidth solid $colorAccentDarkTeal;
+    height: 100%;
+    margin: 0 spacer(5) spacer(5) 0;
+    padding-bottom: spacer(5);
+  }
+}
